@@ -1,7 +1,7 @@
 page 99100 "Object Information List TJP"
 {
     ApplicationArea = All;
-    Caption = 'Object Information List';
+    Caption = 'Object Information (Japanese)';
     CardPageId = "Object Information Card TJP";
     PageType = List;
     SourceTable = "Object Information TJP";

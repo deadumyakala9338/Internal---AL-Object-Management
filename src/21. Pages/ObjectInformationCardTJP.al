@@ -29,35 +29,40 @@ page 99101 "Object Information Card TJP"
                 Caption = 'Table & Table Extension';
                 Visible = TableTabVisible;
 
-                field("Object ID"; Rec."Object ID") { }
-                field("Object Name"; Rec."Object Name") { }
-                field("Object Caption"; Rec."Object Caption") { }
-                field("Object Caption (Japanese)"; Rec."Object Caption (Japanese)") { }
-                field("Extends Object ID"; Rec."Extends Object ID") { }
-                field("Extends Object Name"; Rec."Extends Object Name") { }
-                field("Field ID"; Rec."Field ID") { }
-                field("Field Name"; Rec."Field Name") { }
-                field("Field Caption"; Rec."Field Caption") { }
-                field("Field Caption (Japanese)"; Rec."Field Caption (Japanese)") { }
-                field("Field Data Type"; Rec."Field Data Type") { }
-                field("Field Length"; Rec."Field Length") { }
+                field(TableObjectID; Rec."Object ID") { }
+                field(TableObjectName; Rec."Object Name") { }
+                field(TableObjectCaption; Rec."Object Caption") { }
+                field(TableObjectCaptionJpn; Rec."Object Caption (Japanese)") { }
+                field(TableExtendsObjectID; Rec."Extends Object ID") { }
+                field(TableExtendsObjectName; Rec."Extends Object Name") { }
+                field(TableObjectElement; Rec."Object Element") { }
+                field(TableFieldID; Rec."Field ID") { }
+                field(TableFieldName; Rec."Field Name") { }
+                field(TableFieldCaption; Rec."Field Caption") { }
+                field(TableFieldCaptionJpn; Rec."Field Caption (Japanese)") { }
+                field(TableFieldDataType; Rec."Field Data Type") { }
+                field(TableFieldLength; Rec."Field Length") { }
             }
             group("Page&TableExtension")
             {
                 Caption = 'Page & Page Extension';
                 Visible = PageTabVisible;
 
-                field(PageObjectType; Rec."Object ID") { }
+                field(PageObjectType; Rec."Page Type") { }
+                field(PageObjectID; Rec."Object ID") { }
                 field(PageObjectName; Rec."Object Name") { }
                 field(PageObjectCaption; Rec."Object Caption") { }
                 field(PageObjectCaptionJpn; Rec."Object Caption (Japanese)") { }
+                field(PageSourceObjectID; Rec."Source Object ID") { }
+                field(PageSourceObjectName; Rec."Source Object Name") { }
                 field(PageExtendsObjectID; Rec."Extends Object ID") { }
                 field(PageExtendsObjectName; Rec."Extends Object Name") { }
+                field(PageObjectElement; Rec."Object Element") { }
                 field(PageFieldName; Rec."Field Name") { }
                 field(PageFieldCaption; Rec."Field Caption") { }
                 field(PageFieldCaptionJpn; Rec."Field Caption (Japanese)") { }
-                field(ToolTip; Rec.ToolTip) { }
-                field("ToolTip (Japanese)"; Rec."ToolTip (Japanese)") { }
+                field(PageToolTip; Rec.ToolTip) { }
+                field(PageToolTipJpn; Rec."ToolTip (Japanese)") { }
             }
         }
     }

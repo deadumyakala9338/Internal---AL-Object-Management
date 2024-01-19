@@ -109,6 +109,18 @@ table 99100 "Object Information TJP"
         {
             Caption = 'Field Length';
         }
+        field(35; "Source Object ID"; Integer)
+        {
+            Caption = 'Source Object ID';
+        }
+        field(36; "Source Object Name"; Text[100])
+        {
+            Caption = 'Source Object Name';
+        }
+        field(37; "Object Element"; Enum "Object Element TJP")
+        {
+            Caption = 'Object Element';
+        }
     }
     keys
     {
