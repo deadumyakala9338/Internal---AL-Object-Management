@@ -9,4 +9,5 @@ enum 99101 "App Subcategory TJP"
     value(21; Purchase) { Caption = 'Purchase'; }
     value(30; Warehouse) { Caption = 'Warehouse'; }
     value(40; Finance) { Caption = 'Finance'; }
+    value(89; General) { Caption = 'General'; }
 }

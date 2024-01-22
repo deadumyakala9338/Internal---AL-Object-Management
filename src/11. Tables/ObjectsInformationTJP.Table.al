@@ -6,21 +6,9 @@ table 99100 "Object Information TJP"
 
     fields
     {
-        field(1; "No."; Code[20])
+        field(2; "Entry No."; Integer)
         {
-            Caption = 'No.';
-            NotBlank = true;
-        }
-        field(4; Indentation; Integer)
-        {
-            Caption = 'Indentation';
-            MinValue = 0;
-
-            trigger OnValidate()
-            begin
-                if Indentation < 0 then
-                    Indentation := 0;
-            end;
+            Caption = 'Entry No.';
         }
         field(5; "Entry Type"; Enum "Entry Type TJP")
         {
@@ -34,28 +22,22 @@ table 99100 "Object Information TJP"
         {
             Caption = 'App Subcategory';
         }
-        field(19; "Object Type"; Option)
+        field(8; "Object Type"; Option)
         {
             Caption = 'Object Type';
             OptionMembers = "TableData","Table",,"Report",,"Codeunit","XMLport","MenuSuite","Page","Query","System","FieldNumber",,,"PageExtension","TableExtension","Enum","EnumExtension","Profile","ProfileExtension","PermissionSet","PermissionSetExtension","ReportExtension";
             OptionCaption = 'TableData,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension';
-
-            trigger OnValidate()
-            begin
-                if "Object Type" <> xRec."Object Type" then
-                    Validate("Object ID", 0);
-            end;
         }
-        field(20; "Page Type"; Enum "Page Type TJP")
-        {
-            Caption = 'Page Type';
-        }
-        field(21; "Object ID"; Integer)
+        field(9; "Object ID"; Integer)
         {
             Caption = 'Object ID';
             NotBlank = true;
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = field("Object Type"));
             ValidateTableRelation = true;
+        }
+        field(20; "Page Type"; Enum "Page Type TJP")
+        {
+            Caption = 'Page Type';
         }
         field(22; "Object Name"; Text[80])
         {
@@ -121,9 +103,40 @@ table 99100 "Object Information TJP"
         {
             Caption = 'Object Element';
         }
+        field(50; "Change Reason"; Text[50])
+        {
+            Caption = 'Change Reason';
+        }
     }
     keys
     {
-        key(Key1; "No.") { }
+        key(Key1; "Entry No.") { }
+        key(Key2; "App Category", "Object Type", "Object ID") { }
     }
+
+    procedure InsertObjectLog()
+    var
+        TJPChangeLogHeader: Record "TJP Change Log Header";
+        TJPChangeLogLine: Record "TJP Change Log Line";
+        InsertTJPChangeLogLine: Record "TJP Change Log Line";
+    begin
+        TJPChangeLogHeader.Reset();
+        TJPChangeLogHeader.SetRange("App Category", Rec."App Category");
+        if TJPChangeLogHeader.FindFirst() then begin
+            TJPChangeLogLine.Reset();
+            TJPChangeLogLine.SetRange("App Category", TJPChangeLogHeader."App Category");
+            TJPChangeLogLine.SetRange("Document No.", TJPChangeLogHeader."No.");
+            if TJPChangeLogLine.FindLast() then begin
+                InsertTJPChangeLogLine.Init();
+                InsertTJPChangeLogLine."App Category" := TJPChangeLogHeader."App Category";
+                InsertTJPChangeLogLine."Document No." := TJPChangeLogHeader."No.";
+                InsertTJPChangeLogLine."Line No." := TJPChangeLogLine."Line No." + 10000;
+                InsertTJPChangeLogLine."App Subcategory" := Rec."App Subcategory";
+                InsertTJPChangeLogLine."Object Type" := Rec."Object Type";
+                InsertTJPChangeLogLine."Object ID" := Rec."Object ID";
+                InsertTJPChangeLogLine."Line Change Log" := "Change Reason";
+                InsertTJPChangeLogLine.Insert();
+            end;
+        end;
+    end;
 }

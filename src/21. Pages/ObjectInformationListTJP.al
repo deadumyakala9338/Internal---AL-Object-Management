@@ -14,10 +14,15 @@ page 99100 "Object Information List TJP"
         {
             repeater(Control1)
             {
-                field("No."; Rec."No.")
+                field("App Category"; Rec."App Category")
                 {
                     ApplicationArea = Basic, Suite;
                     Style = Strong;
+                }
+                field("App Subcategory"; Rec."App Subcategory")
+                {
+                    ApplicationArea = Basic, Suite;
+                    Visible = false;
                 }
                 field("Object Type"; Rec."Object Type")
                 {
@@ -39,14 +44,6 @@ page 99100 "Object Information List TJP"
                     ApplicationArea = Basic, Suite;
                 }
                 field("Object Caption (Japanese)"; Rec."Object Caption (Japanese)")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
-                field("Extends Object ID"; Rec."Extends Object ID")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
-                field("Extends Object Name"; Rec."Extends Object Name")
                 {
                     ApplicationArea = Basic, Suite;
                 }
@@ -78,11 +75,11 @@ page 99100 "Object Information List TJP"
                 {
                     ApplicationArea = Basic, Suite;
                 }
-                field("App Category"; Rec."App Category")
+                field("Extends Object ID"; Rec."Extends Object ID")
                 {
                     ApplicationArea = Basic, Suite;
                 }
-                field("App Subcategory"; Rec."App Subcategory")
+                field("Extends Object Name"; Rec."Extends Object Name")
                 {
                     ApplicationArea = Basic, Suite;
                 }
