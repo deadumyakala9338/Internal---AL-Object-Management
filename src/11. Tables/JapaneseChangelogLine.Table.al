@@ -1,24 +1,20 @@
-table 99103 "TJP Change Log Line"
+table 99104 "Japanese Changelog Line"
 {
-    Caption = 'TJP - Change Log Line';
+    Caption = 'Japanese Changelog Line';
     fields
     {
-        field(1; "App Category"; Enum "App Category TJP")
+        field(1; "App Name"; Text[250])
         {
-            Caption = 'App Category';
+            Caption = 'App Name';
         }
         field(3; "Document No."; Code[20])
         {
             Caption = 'Document No.';
-            TableRelation = "TJP Change Log Header"."No." where("App Category" = field("App Category"));
+            TableRelation = "Japanese Changelog Header"."No." where("App Name" = field("App Name"));
         }
         field(4; "Line No."; Integer)
         {
             Caption = 'Line No.';
-        }
-        field(20; "App Subcategory"; Enum "App Subcategory TJP")
-        {
-            Caption = 'App Subcategory';
         }
         field(21; "Object Type"; Option)
         {
@@ -40,7 +36,7 @@ table 99103 "TJP Change Log Line"
     }
     keys
     {
-        key(Key1; "App Category", "Document No.", "Line No.")
+        key(Key1; "App Name", "Document No.", "Line No.")
         {
             Clustered = true;
         }

@@ -1,11 +1,11 @@
-table 99101 "TJP Change Log Header"
+table 99102 "Japanese Changelog Header"
 {
-    Caption = 'TJP - Change Log Header';
+    Caption = 'Japanese Changelog Header';
     fields
     {
-        field(1; "App Category"; Enum "App Category TJP")
+        field(1; "App Name"; Text[250])
         {
-            Caption = 'App Category';
+            Caption = 'App Name';
         }
         field(3; "No."; Code[20])
         {
@@ -14,7 +14,7 @@ table 99101 "TJP Change Log Header"
             trigger OnValidate()
             begin
                 if "No." <> xRec."No." then begin
-                    GetTJPChangeLogSetup();
+                    GetJpnChangeLogSetup();
                     NoSeriesMgt.TestManual(GetNoSeriesCode());
                     "No. Series" := '';
                 end;
@@ -38,7 +38,7 @@ table 99101 "TJP Change Log Header"
 
     keys
     {
-        key(Key1; "App Category", "No.")
+        key(Key1; "App Name", "No.")
         {
             Clustered = true;
         }
@@ -52,9 +52,9 @@ table 99101 "TJP Change Log Header"
         end;
     end;
 
-    local procedure GetTJPChangeLogSetup()
+    local procedure GetJpnChangeLogSetup()
     begin
-        TJPChangeLogSetup.Get();
+        JpnChangelogSetup.Get();
     end;
 
     procedure GetNoSeriesCode(): Code[20]
@@ -62,36 +62,35 @@ table 99101 "TJP Change Log Header"
         NoSeriesCode: Code[20];
         IsHandled: Boolean;
     begin
-        GetTJPChangeLogSetup();
-        NoSeriesCode := TJPChangeLogSetup."Enhancement Nos.";
+        GetJpnChangeLogSetup();
+        NoSeriesCode := JpnChangelogSetup."Enhancement Nos.";
     end;
 
     procedure TestNoSeries()
     begin
-        GetTJPChangeLogSetup();
-        TJPChangeLogSetup.TestField("Enhancement Nos.");
+        GetJpnChangeLogSetup();
+        JpnChangelogSetup.TestField("Enhancement Nos.");
     end;
 
-    procedure AssistEdit(OldTJPChangeLogHeader: Record "TJP Change Log Header") Result: Boolean
+    procedure AssistEdit(OldJapaneseChangelogHeader: Record "Japanese Changelog Header") Result: Boolean
     var
-        TJPChangeLogHeader2: Record "TJP Change Log Header";
-        IsHandled: Boolean;
+        JapaneseChangelogHeader2: Record "Japanese Changelog Header";
     begin
         Copy(Rec);
-        GetTJPChangeLogSetup();
+        GetJpnChangeLogSetup();
         TestNoSeries();
-        if NoSeriesMgt.SelectSeries(GetNoSeriesCode(), OldTJPChangeLogHeader."No. Series", "No. Series") then begin
+        if NoSeriesMgt.SelectSeries(GetNoSeriesCode(), OldJapaneseChangelogHeader."No. Series", "No. Series") then begin
         end;
         NoSeriesMgt.SetSeries("No.");
-        if TJPChangeLogHeader2.Get("App Category", "No.") then
-            Error(Text051, LowerCase(Format("App Category")), "No.");
-        Rec := TJPChangeLogHeader;
+        if JapaneseChangelogHeader2.Get("App Name", "No.") then
+            Error(Text051, LowerCase(Format("App Name")), "No.");
+        Rec := JpnChangelogHeader;
         exit(true);
     end;
 
     var
-        TJPChangeLogSetup: Record "TJP Change Log Setup";
-        TJPChangeLogHeader: Record "TJP Change Log Header";
+        JpnChangelogSetup: Record "Japanese Changelog Setup";
+        JpnChangelogHeader: Record "Japanese Changelog Header";
         NoSeriesMgt: Codeunit NoSeriesManagement;
         Text051: Label 'The change log header %1 %2 already exists.';
 }

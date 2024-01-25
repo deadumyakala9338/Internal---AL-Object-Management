@@ -1,9 +1,9 @@
-page 99101 "Object Information Card TJP"
+page 99101 "Japanese All Objects Card"
 {
     ApplicationArea = All;
-    Caption = 'Object Information';
+    Caption = 'Japanese All Objects';
     PageType = Card;
-    SourceTable = "Object Information TJP";
+    SourceTable = "Japanese All Objects";
 
     layout
     {
@@ -12,9 +12,7 @@ page 99101 "Object Information Card TJP"
             group(General)
             {
                 Caption = 'General';
-                field("Entry No."; Rec."Entry No.") { }
-                field("App Category"; Rec."App Category") { }
-                field("App Subcategory"; Rec."App Subcategory") { }
+                field("App Name"; Rec."App Name") { }
                 field("Object Type"; Rec."Object Type")
                 {
                     trigger OnValidate()
@@ -23,6 +21,7 @@ page 99101 "Object Information Card TJP"
                     end;
                 }
                 field("Object ID"; Rec."Object ID") { }
+                field("Object Category"; Rec."Object Category") { }
             }
             group("Table&TableExtension")
             {
@@ -41,6 +40,7 @@ page 99101 "Object Information Card TJP"
                 {
                     ShowCaption = false;
                     Visible = Rec."Object Type" = Rec."Object Type"::"TableExtension";
+                    field(TableExtendsObjectType; Rec."Extends Object Type") { }
                     field(TableExtendsObjectID; Rec."Extends Object ID") { }
                     field(TableExtendsObjectName; Rec."Extends Object Name") { }
                 }
@@ -61,12 +61,18 @@ page 99101 "Object Information Card TJP"
                 field(PageObjectName; Rec."Object Name") { }
                 field(PageObjectCaption; Rec."Object Caption") { }
                 field(PageObjectCaptionJpn; Rec."Object Caption (Japanese)") { }
-                field(PageSourceObjectID; Rec."Source Object ID") { }
-                field(PageSourceObjectName; Rec."Source Object Name") { }
+                group(PageExtensionRelatedPage)
+                {
+                    ShowCaption = false;
+                    Visible = Rec."Object Type" = Rec."Object Type"::"Page";
+                    field(PageSourceObjectID; Rec."Source Object ID") { }
+                    field(PageSourceObjectName; Rec."Source Object Name") { }
+                }
                 group(PageExtensionRelated)
                 {
                     ShowCaption = false;
                     Visible = Rec."Object Type" = Rec."Object Type"::"PageExtension";
+                    field(PageExtendsObjectType; Rec."Extends Object Type") { }
                     field(PageExtendsObjectID; Rec."Extends Object ID") { }
                     field(PageExtendsObjectName; Rec."Extends Object Name") { }
                 }
@@ -89,7 +95,7 @@ page 99101 "Object Information Card TJP"
                     trigger OnValidate()
                     begin
                         if Confirm('Objects changes done. Do you want to register this change into change log sheet?', true) then begin
-                            Rec.InsertObjectLog();
+                            Rec.InsertObjectChangeLog();
                             InsertRecord := false;
                         end;
                     end;

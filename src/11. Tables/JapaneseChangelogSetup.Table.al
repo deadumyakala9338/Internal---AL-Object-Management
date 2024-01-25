@@ -1,8 +1,8 @@
-table 99102 "TJP Change Log Setup"
+table 99103 "Japanese Changelog Setup"
 {
-    Caption = 'TJP - Change Log Setup';
-    DrillDownPageID = "TJP Change Log Setup";
-    LookupPageID = "TJP Change Log Setup";
+    Caption = 'Japanese Changelog Setup';
+    DrillDownPageID = "Japanese Changelog Setup";
+    LookupPageID = "Japanese Changelog Setup";
 
     fields
     {

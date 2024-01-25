@@ -1,12 +1,11 @@
-page 99100 "Object Information List TJP"
+page 99100 "Japanese All Objects List"
 {
     ApplicationArea = All;
-    Caption = 'Object Information (Japanese)';
-    CardPageId = "Object Information Card TJP";
+    Caption = 'Japanese All Objects';
+    CardPageId = "Japanese All Objects Card";
     PageType = List;
-    SourceTable = "Object Information TJP";
+    SourceTable = "Japanese All Objects";
     UsageCategory = Lists;
-    Editable = false;
 
     layout
     {
@@ -14,12 +13,12 @@ page 99100 "Object Information List TJP"
         {
             repeater(Control1)
             {
-                field("App Category"; Rec."App Category")
+                field("App Name"; Rec."App Name")
                 {
                     ApplicationArea = Basic, Suite;
                     Style = Strong;
                 }
-                field("App Subcategory"; Rec."App Subcategory")
+                field("Object Category"; Rec."Object Category")
                 {
                     ApplicationArea = Basic, Suite;
                     Visible = false;
@@ -68,10 +67,6 @@ page 99100 "Object Information List TJP"
                     ApplicationArea = Basic, Suite;
                 }
                 field("Field Length"; Rec."Field Length")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
-                field("Entry Type"; Rec."Entry Type")
                 {
                     ApplicationArea = Basic, Suite;
                 }

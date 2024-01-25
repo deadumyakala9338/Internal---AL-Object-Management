@@ -1,9 +1,9 @@
-page 99105 "TJP Change Log Setup"
+page 99105 "Japanese Changelog Setup"
 {
     ApplicationArea = Basic, Suite;
-    Caption = 'TJP Change Log Setup';
+    Caption = 'Japanese Changelog Setup';
     PageType = Card;
-    SourceTable = "TJP Change Log Setup";
+    SourceTable = "Japanese Changelog Setup";
     UsageCategory = Administration;
 
     layout

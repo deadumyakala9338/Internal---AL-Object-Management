@@ -1,10 +1,10 @@
-page 99103 "TJP Change Log"
+page 99103 "Japanese Changelog"
 {
     ApplicationArea = All;
-    Caption = 'TJP Change Log';
+    Caption = 'Japanese ChangeLog';
     PageType = Document;
     RefreshOnActivate = true;
-    SourceTable = "TJP Change Log Header";
+    SourceTable = "Japanese Changelog Header";
 
     layout
     {
@@ -14,9 +14,7 @@ page 99103 "TJP Change Log"
             {
                 Caption = 'General';
 
-                field("App Category"; Rec."App Category")
-                {
-                }
+                field("App Name"; Rec."App Name") { }
                 field("No."; Rec."No.")
                 {
                     trigger OnAssistEdit()
@@ -29,10 +27,10 @@ page 99103 "TJP Change Log"
                 {
                 }
             }
-            part(ChangeLogLines; "TJP Change Log Subform")
+            part("JapaneseChangelogLinese"; "Japanese Changelog Subform")
             {
                 ApplicationArea = Basic, Suite;
-                SubPageLink = "App Category" = field("App Category"), "Document No." = field("No.");
+                SubPageLink = "App Name" = field("App Name"), "Document No." = field("No.");
                 UpdatePropagation = Both;
             }
         }
@@ -46,7 +44,7 @@ page 99103 "TJP Change Log"
                 ApplicationArea = All;
                 Caption = 'Open Change Log Document.';
                 Image = Open;
-                RunObject = page "TJP Change Log List";
+                RunObject = page "Japanese Changelog List";
             }
         }
     }

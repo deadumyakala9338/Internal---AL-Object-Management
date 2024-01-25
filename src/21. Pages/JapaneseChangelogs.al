@@ -1,12 +1,12 @@
-page 99102 "TJP Change Log List"
+page 99102 "Japanese Changelog List"
 {
     ApplicationArea = Basic, Suite;
-    Caption = 'TJP - Change Logs';
-    CardPageId = "TJP Change Log";
+    Caption = 'Japanese Changelogs';
+    CardPageId = "Japanese Changelog";
     Editable = false;
     PageType = List;
     RefreshOnActivate = true;
-    SourceTable = "TJP Change Log Header";
+    SourceTable = "Japanese Changelog Header";
     UsageCategory = Lists;
 
     layout
@@ -16,7 +16,7 @@ page 99102 "TJP Change Log List"
             repeater(General)
             {
                 field("No."; Rec."No.") { }
-                field("App Category"; Rec."App Category") { }
+                field("App Name"; Rec."App Name") { }
                 field("Change Remarks"; Rec."Change Remarks") { }
             }
         }

@@ -3,325 +3,345 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="AL Object Management">
     <body>
       <group id="body">
-        <trans-unit id="Table 1327748705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Object Information</source>
+        <trans-unit id="Table 1951488164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese All Objects</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 3288392259 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>App Category</source>
+        <trans-unit id="Table 1951488164 - Field 2766253784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field App Category - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field App ID - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 4201013223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>App Subcategory</source>
+        <trans-unit id="Table 1951488164 - Field 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field App Subcategory - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field App Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 508474342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 1367742458 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Package ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field App Package ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1951488164 - Field 508474342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Change Reason</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Change Reason - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Change Reason - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Entry No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Entry No. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Entry No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 149522872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Entry Type</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Entry Type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 4078313663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 4078313663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Extends Object ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Extends Object ID - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Extends Object ID - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 2084357865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 2084357865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Extends Object Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Extends Object Name - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Extends Object Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 823559016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 2131085588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extends Object Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Extends Object Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1951488164 - Field 2131085588 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TableData,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Extends Object Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 1951488164 - Field 823559016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field Caption</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Field Caption - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Field Caption - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 2899357094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 2899357094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field Caption (Japanese)</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Field Caption (Japanese) - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Field Caption (Japanese) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 2872479598 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 2872479598 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field Data Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Field Data Type - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Field Data Type - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 869342929 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 869342929 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Field ID - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Field ID - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 3618188786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 3618188786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field Length</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Field Length - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Field Length - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 3070320983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 3070320983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Field Name - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Field Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 3811799877 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 3811799877 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Caption</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Object Caption - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Object Caption - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 1773356959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 1773356959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Caption (Japanese)</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Object Caption (Japanese) - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Object Caption (Japanese) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 3783593997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 3299518631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Object Category - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1951488164 - Field 3783593997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Element</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Object Element - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Object Element - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 3711240756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 3711240756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Object ID - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Object ID - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 1418569422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 1418569422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Object Name - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Object Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 1085746399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 1085746399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Object Type - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Object Type - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 1085746399 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 1085746399 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>TableData,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Object Type - Property OptionCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Object Type - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 3875859997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 3875859997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Page Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Page Type - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Page Type - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 4264439119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 4264439119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source Object ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Source Object ID - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Source Object ID - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 2712543225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 2712543225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source Object Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field Source Object Name - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field Source Object Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 1295455071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 1295455071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ToolTip</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field ToolTip - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field ToolTip - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1327748705 - Field 4207960021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1951488164 - Field 4207960021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ToolTip (Japanese)</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Object Information TJP - Field ToolTip (Japanese) - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese All Objects - Field ToolTip (Japanese) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2148071045 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TJP - Change Log Header</source>
+        <trans-unit id="Table 1122011550 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese App Information</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Header - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese App Information - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2148071045 - NamedType 4269661899" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1122011550 - Field 2766253784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese App Information - Field App ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1122011550 - Field 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese App Information - Field App Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1122011550 - Field 1367742458 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Package ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese App Information - Field App Package ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1122011550 - Field 1606374689 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Publisher</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese App Information - Field App Publisher - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1457300582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese Changelog Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1457300582 - NamedType 4269661899" size-unit="char" translate="yes" xml:space="preserve">
           <source>The change log header %1 %2 already exists.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Header - NamedType Text051</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - NamedType Text051</note>
         </trans-unit>
-        <trans-unit id="Table 2148071045 - Field 3288392259 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>App Category</source>
+        <trans-unit id="Table 1457300582 - Field 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Header - Field App Category - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field App Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2148071045 - Field 1686929801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1457300582 - Field 1686929801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Change Remarks</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Header - Field Change Remarks - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field Change Remarks - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2148071045 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1457300582 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Header - Field No. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2148071045 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1457300582 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No. Series</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Header - Field No. Series - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field No. Series - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2148071045 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1457300582 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posting Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Header - Field Posting Date - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field Posting Date - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 974549118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TJP - Change Log Line</source>
+        <trans-unit id="Table 3930405293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese Changelog Line</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 974549118 - Field 3288392259 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>App Category</source>
+        <trans-unit id="Table 3930405293 - Field 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Field App Category - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field App Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 974549118 - Field 4201013223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>App Subcategory</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Field App Subcategory - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 974549118 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3930405293 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Field Document No. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Document No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 974549118 - Field 1347689408 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3930405293 - Field 1347689408 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line Change Log</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Field Line Change Log - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Line Change Log - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 974549118 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3930405293 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Field Line No. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Line No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 974549118 - Field 3711240756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3930405293 - Field 3711240756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Field Object ID - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Object ID - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 974549118 - Field 1085746399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3930405293 - Field 1085746399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Field Object Type - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Object Type - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 974549118 - Field 1085746399 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3930405293 - Field 1085746399 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>TableData,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Line - Field Object Type - Property OptionCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Object Type - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Table 3998662821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TJP - Change Log Setup</source>
+        <trans-unit id="Table 1887446382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese Changelog Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Setup - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Setup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3998662821 - Field 841643200 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1887446382 - Field 841643200 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enhancement Nos.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Setup - Field Enhancement Nos. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Setup - Field Enhancement Nos. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3998662821 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1887446382 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table TJP Change Log Setup - Field Primary Key - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Setup - Field Primary Key - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511379565 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Object Information</source>
+        <trans-unit id="Page 558003024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese All Objects</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Information Card TJP - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese All Objects Card - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511379565 - Control 3385974129 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 558003024 - Control 3385974129 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Change Remarks</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Information Card TJP - Control ChangeRemarks - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese All Objects Card - Control ChangeRemarks - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511379565 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 558003024 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Information Card TJP - Control General - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese All Objects Card - Control General - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511379565 - Control 3742479726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 558003024 - Control 3742479726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Page &amp; Page Extension</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Information Card TJP - Control Page&amp;TableExtension - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese All Objects Card - Control Page&amp;TableExtension - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 511379565 - Control 3583840121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 558003024 - Control 3583840121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Table &amp; Table Extension</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Information Card TJP - Control Table&amp;TableExtension - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese All Objects Card - Control Table&amp;TableExtension - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 701758103 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Object Information (Japanese)</source>
+        <trans-unit id="Page 1306731574 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese All Objects</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Information List TJP - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese All Objects List - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1781806264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TJP Change Log</source>
+        <trans-unit id="Page 1122011550 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese App Information</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TJP Change Log - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese App Information - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1781806264 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1122011550 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TJP Change Log - Control General - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese App Information - Control General - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1781806264 - Action 3618938624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3683854428 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese App Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese App Information List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3395658079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese ChangeLog</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3395658079 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3395658079 - Action 3618938624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Change Log Document.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TJP Change Log - Action ExportTemplate - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog - Action ExportTemplate - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1423982762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TJP - Change Logs</source>
+        <trans-unit id="Page 879203305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese Changelogs</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TJP Change Log List - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog List - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3998662821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TJP Change Log Setup</source>
+        <trans-unit id="Page 1887446382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese Changelog Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TJP Change Log Setup - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog Setup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3998662821 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1887446382 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TJP Change Log Setup - Control General - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog Setup - Control General - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1575745570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TJP Change Log Lines</source>
+        <trans-unit id="Page 1437376985 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TJP Change Log Subform - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Enum 2499468297 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source> </source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum App Category TJP - EnumValue   - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Enum 2499468297 - EnumValue 300679708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Language</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum App Category TJP - EnumValue JpLanguage - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Enum 2499468297 - EnumValue 4142189587 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Localization</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum App Category TJP - EnumValue JpLocalization - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Enum 2499468297 - EnumValue 3960026678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Pages</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum App Category TJP - EnumValue JpPages - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Enum 2499468297 - EnumValue 415610689 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reports</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum App Category TJP - EnumValue JpReports - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Enum 2499468297 - EnumValue 37531633 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Simple APIs</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum App Category TJP - EnumValue JpSimpleAPIs - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog Subform - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 222971045 - EnumValue 453117733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>FA JPDB</source>
@@ -377,6 +397,46 @@
           <source>Total</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Entry Type TJP - EnumValue Total - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2281215205 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Object Category TJP - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2281215205 - EnumValue 453117733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FA JPDB</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Object Category TJP - EnumValue FAJPDB - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2281215205 - EnumValue 17419004 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Object Category TJP - EnumValue Finance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2281215205 - EnumValue 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Object Category TJP - EnumValue General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2281215205 - EnumValue 2134220455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Promissory Note</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Object Category TJP - EnumValue PromissoryNote - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2281215205 - EnumValue 395510365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Object Category TJP - EnumValue Purchase - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2281215205 - EnumValue 1406942772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Object Category TJP - EnumValue Sales - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2281215205 - EnumValue 1484878399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warehouse</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Object Category TJP - EnumValue Warehouse - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2263865087 - EnumValue 2279323338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Action</source>

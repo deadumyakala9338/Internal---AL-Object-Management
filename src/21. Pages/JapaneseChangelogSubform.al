@@ -1,13 +1,13 @@
-page 99104 "TJP Change Log Subform"
+page 99104 "Japanese Changelog Subform"
 {
     AutoSplitKey = true;
     ApplicationArea = All;
-    Caption = 'TJP Change Log Lines';
+    Caption = 'Lines';
     DelayedInsert = true;
     LinksAllowed = false;
     MultipleNewLines = true;
     PageType = ListPart;
-    SourceTable = "TJP Change Log Line";
+    SourceTable = "Japanese Changelog Line";
 
     layout
     {
@@ -15,7 +15,7 @@ page 99104 "TJP Change Log Subform"
         {
             repeater(General)
             {
-                field("App Category"; Rec."App Category")
+                field("App Name"; Rec."App Name")
                 {
                     Visible = false;
                 }

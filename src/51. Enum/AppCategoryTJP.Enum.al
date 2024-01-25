@@ -1,12 +1,14 @@
-enum 99100 "App Category TJP"
+enum 99100 "Object Category TJP"
 {
     Extensible = true;
     AssignmentCompatibility = true;
 
     value(10; " ") { Caption = ' '; }
-    value(20; JpLocalization) { Caption = 'Localization'; }
-    value(30; JpLanguage) { Caption = 'Language'; }
-    value(40; JpPages) { Caption = 'Pages'; }
-    value(50; JpReports) { Caption = 'Reports'; }
-    value(60; JpSimpleAPIs) { Caption = 'Simple APIs'; }
+    value(20; PromissoryNote) { Caption = 'Promissory Note'; }
+    value(30; FAJPDB) { Caption = 'FA JPDB'; }
+    value(40; Sales) { Caption = 'Sales'; }
+    value(50; Purchase) { Caption = 'Purchase'; }
+    value(60; Warehouse) { Caption = 'Warehouse'; }
+    value(70; Finance) { Caption = 'Finance'; }
+    value(80; General) { Caption = 'General'; }
 }
