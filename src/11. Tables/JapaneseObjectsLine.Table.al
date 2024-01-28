@@ -2,6 +2,10 @@ table 99105 "Japanese Objects Line"
 {
     fields
     {
+        field(1; "Entry No."; Integer)
+        {
+            Caption = 'Entry No.';
+        }
         field(3; "App Name"; Text[250])
         {
             Caption = 'App Name';
@@ -32,6 +36,12 @@ table 99105 "Japanese Objects Line"
         field(10; "Object Element"; Enum "Object Element TJP")
         {
             Caption = 'Object Element';
+
+            trigger OnValidate()
+            begin
+                GetJapaneseObjectsHeader();
+                InitHeaderDefaults(JapaneseObjectsHeader);
+            end;
         }
         field(11; "Field ID"; Integer)
         {
@@ -115,7 +125,11 @@ table 99105 "Japanese Objects Line"
 
     keys
     {
-        key(pk; "App Name", "Object Type", "Object ID", "Line No.")
+        key(Key1; "Entry No.", "Line No.")
+        {
+            Clustered = true;
+        }
+        key(Key2; "App Name", "Object Type", "Object ID")
         {
         }
     }
@@ -143,4 +157,21 @@ table 99105 "Japanese Objects Line"
             Rec."App Runtime Package ID" := RecField."App Runtime Package ID";
         end;
     end;
+
+    procedure GetJapaneseObjectsHeader()
+    begin
+        Rec.TestField("Entry No.");
+        Clear(JapaneseObjectsHeader);
+        if JapaneseObjectsHeader.Get("Entry No.") then;
+    end;
+
+    procedure InitHeaderDefaults(JapaneseObjectsHeader: Record "Japanese Objects Header")
+    begin
+        "App Name" := JapaneseObjectsHeader."App Name";
+        "Object Type" := JapaneseObjectsHeader."Object Type";
+        "Object ID" := JapaneseObjectsHeader."Object ID";
+    end;
+
+    var
+        JapaneseObjectsHeader: Record "Japanese Objects Header";
 }

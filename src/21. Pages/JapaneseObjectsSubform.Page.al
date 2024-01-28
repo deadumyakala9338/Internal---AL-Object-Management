@@ -15,9 +15,9 @@ page 99110 "Japanese Objects Subform"
         {
             repeater(General)
             {
+                field("Object Element"; Rec."Object Element") { }
                 field("Object Type"; Rec."Object Type") { }
                 field("Object ID"; Rec."Object ID") { }
-                field("Object Element"; Rec."Object Element") { }
                 field("Field ID"; Rec."Field ID")
                 {
                     Editable = Rec."Object Type" = Rec."Object Type"::"Table";
@@ -29,6 +29,26 @@ page 99110 "Japanese Objects Subform"
                 field("Field Length"; Rec."Field Length") { }
                 field("Field Class"; Rec."Field Class") { }
                 field(IsPartOfPrimaryKey; Rec.IsPartOfPrimaryKey) { }
+            }
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action(DeleteData)
+            {
+                Caption = 'Delete Data';
+                ApplicationArea = Basic, Suite;
+                Image = Delete;
+
+                trigger OnAction()
+                var
+                    JapaneseObjectsLine: Record "Japanese Objects Line";
+                begin
+                    JapaneseObjectsLine.Reset();
+                    JapaneseObjectsLine.DeleteAll();
+                end;
             }
         }
     }

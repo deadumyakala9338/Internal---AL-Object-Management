@@ -8,10 +8,9 @@ table 99106 "Japanese Objects Header"
 
     fields
     {
-        field(2; "Entry No."; Integer)
+        field(1; "Entry No."; Integer)
         {
             Caption = 'Entry No.';
-            Editable = false;
         }
         field(4; "App Name"; Text[250])
         {
@@ -22,10 +21,8 @@ table 99106 "Japanese Objects Header"
             var
                 JapaneseAppInformation: Record "Japanese App Information";
             begin
-                if Rec."App Name" = '' then begin
-                    Rec."App ID" := '';
-                    Rec."App Package ID" := '';
-                end;
+                if Rec."App Name" <> xRec."App Name" then
+                    MessageIfSalesLinesExist(FieldCaption("App Name"));
 
                 JapaneseAppInformation.Reset();
                 JapaneseAppInformation.SetRange("App Name", Rec."App Name");
@@ -42,9 +39,8 @@ table 99106 "Japanese Objects Header"
 
             trigger OnValidate()
             begin
-                if Rec."Object Type" <> xRec."Object Type" then begin
-                    Rec.Validate("Object ID", 0);
-                end;
+                if Rec."Object Type" <> xRec."Object Type" then
+                    MessageIfSalesLinesExist(FieldCaption("Object Type"));
             end;
         }
         field(12; "Object ID"; Integer)
@@ -61,6 +57,9 @@ table 99106 "Japanese Objects Header"
             trigger OnValidate()
             begin
                 if Rec."Object ID" <> xRec."Object ID" then
+                    MessageIfSalesLinesExist(FieldCaption("Object ID"));
+
+                if not JapaneseObjectLinesExist() then
                     ClearFieldValues();
             end;
         }
@@ -122,42 +121,6 @@ table 99106 "Japanese Objects Header"
             Caption = 'Extends Object Name';
             Editable = false;
         }
-        field(27; "Object Element"; Enum "Object Element TJP")
-        {
-            Caption = 'Object Element';
-        }
-        field(40; "Field ID"; Text[30])
-        {
-            Caption = 'Field ID';
-        }
-        field(41; "Field Name"; Text[30])
-        {
-            Caption = 'Field Name';
-        }
-        field(42; "Field Caption"; Text[100])
-        {
-            Caption = 'Field Caption';
-        }
-        field(43; "Field Caption (Japanese)"; Text[100])
-        {
-            Caption = 'Field Caption (Japanese)';
-        }
-        field(44; "ToolTip"; Text[500])
-        {
-            Caption = 'ToolTip';
-        }
-        field(45; "ToolTip (Japanese)"; Text[500])
-        {
-            Caption = 'ToolTip (Japanese)';
-        }
-        field(46; "Field Data Type"; Text[50])
-        {
-            Caption = 'Field Data Type';
-        }
-        field(47; "Field Length"; Text[5])
-        {
-            Caption = 'Field Length';
-        }
         field(49; "Source Object ID"; Integer)
         {
             Caption = 'Source Object ID';
@@ -174,15 +137,32 @@ table 99106 "Japanese Objects Header"
             Caption = 'Source Object Name';
             Editable = false;
         }
-        field(60; "Change Reason"; Text[50])
-        {
-            Caption = 'Change Reason';
-        }
     }
     keys
     {
-        key(Key1; "App Name", "Object Type", "Object ID") { }
+        key(Key1; "Entry No.")
+        {
+            Clustered = true;
+        }
+        key(Key2; "App Name", "Object Type", "Object ID") { }
     }
+
+    trigger OnInsert()
+    begin
+        InsertEntryNo();
+    end;
+
+    local procedure InsertEntryNo()
+    var
+        JapaneseObjectsHeader: Record "Japanese Objects Header";
+    begin
+        JapaneseObjectsHeader.Reset();
+        JapaneseObjectsHeader.SetCurrentKey("Entry No.");
+        if JapaneseObjectsHeader.FindLast() then
+            "Entry No." := JapaneseObjectsHeader."Entry No." + 1
+        else
+            "Entry No." := 1;
+    end;
 
     local procedure LookupAndValidateObjectFields()
     var
@@ -263,15 +243,6 @@ table 99106 "Japanese Objects Header"
         Clear(Rec."Extends Object Type");
         Validate(Rec."Extends Object ID", 0);
         Validate(Rec."Extends Object Name", '');
-        Clear(Rec."Object Element");
-        Validate(Rec."Field ID", '');
-        Validate(Rec."Field Name", '');
-        Validate(Rec."Field Caption", '');
-        Validate(Rec."Field Caption (Japanese)", '');
-        Validate(Rec."Field Data Type", '');
-        Validate(Rec."Field Length", '');
-        Validate(Rec.ToolTip, '');
-        Validate(Rec."ToolTip (Japanese)", '');
     end;
 
     procedure InsertObjectChangeLog()
@@ -293,9 +264,38 @@ table 99106 "Japanese Objects Header"
                 InsertJpnChangelogLine."Line No." := JpnChangelogLine."Line No." + 10000;
                 InsertJpnChangelogLine."Object Type" := Rec."Object Type";
                 InsertJpnChangelogLine."Object ID" := Rec."Object ID";
-                InsertJpnChangelogLine."Line Change Log" := "Change Reason";
                 InsertJpnChangelogLine.Insert();
             end;
         end;
     end;
+
+    procedure MessageIfSalesLinesExist(ChangedFieldName: Text[100])
+    var
+        MessageText: Text;
+    begin
+        if JapaneseObjectLinesExist() and not GetHideValidationDialog() then begin
+            MessageText := StrSubstNo(LinesNotUpdatedMsg, ChangedFieldName);
+            MessageText := StrSubstNo(SplitMessageTxt, MessageText, Text019);
+            Error(MessageText);
+        end;
+    end;
+
+    procedure JapaneseObjectLinesExist(): Boolean
+    begin
+        JapaneseObjectsLine.Reset();
+        JapaneseObjectsLine.SetRange("Entry No.", Rec."Entry No.");
+        exit(not JapaneseObjectsLine.IsEmpty());
+    end;
+
+    procedure GetHideValidationDialog(): Boolean
+    begin
+        exit(HideValidationDialog);
+    end;
+
+    var
+        JapaneseObjectsLine: Record "Japanese Objects Line";
+        HideValidationDialog: Boolean;
+        LinesNotUpdatedMsg: Label 'You have changed %1 on the objects header, but it has not been changed on the existing objects lines.', Comment = 'You have changed apptype/objecttype/objectid but it has not been changed on the existing object lines.';
+        SplitMessageTxt: Label '%1\%2', Comment = 'Some message text 1.\Some message text 2.', Locked = true;
+        Text019: Label 'You must delete/update the existing object lines manually.';
 }

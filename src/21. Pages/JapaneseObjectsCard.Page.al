@@ -21,72 +21,24 @@ page 99109 "Japanese Objects Card"
                     end;
                 }
                 field("Object ID"; Rec."Object ID") { }
+                field("Object Name"; Rec."Object Name") { }
+                field("Object Caption"; Rec."Object Caption") { }
+                field("Object Caption (Japanese)"; Rec."Object Caption (Japanese)") { }
+
+                field("Extends Object Type"; Rec."Extends Object Type") { }
+                field("Extends Object ID"; Rec."Extends Object ID") { }
+                field("Extends Object Name"; Rec."Extends Object Name") { }
+                field("Source Object ID"; Rec."Source Object ID")
+                {
+                    Editable = Rec."Object Type" = Rec."Object Type"::"Page";
+                }
+                field("Source Object Name"; Rec."Source Object Name") { }
                 field("Object Category"; Rec."Object Category") { }
-            }
-            group("Table&TableExtension")
-            {
-                Caption = 'Table & Table Extension';
-                Visible = TableTabVisible;
-
-                group(TableRelated)
-                {
-                    ShowCaption = false;
-                    Visible = Rec."Object Type" = Rec."Object Type"::"Table";
-                    field(TableObjectName; Rec."Object Name") { }
-                    field(TableObjectCaption; Rec."Object Caption") { }
-                    field(TableObjectCaptionJpn; Rec."Object Caption (Japanese)") { }
-                }
-                group(TableExtensionRelated)
-                {
-                    ShowCaption = false;
-                    Visible = Rec."Object Type" = Rec."Object Type"::"TableExtension";
-                    field(TableExtendsObjectType; Rec."Extends Object Type") { }
-                    field(TableExtendsObjectID; Rec."Extends Object ID") { }
-                    field(TableExtendsObjectName; Rec."Extends Object Name") { }
-                }
-                field(TableObjectElement; Rec."Object Element") { }
-                field(TableFieldID; Rec."Field ID") { }
-                field(TableFieldName; Rec."Field Name") { }
-                field(TableFieldCaption; Rec."Field Caption") { }
-                field(TableFieldCaptionJpn; Rec."Field Caption (Japanese)") { }
-                field(TableFieldDataType; Rec."Field Data Type") { }
-                field(TableFieldLength; Rec."Field Length") { }
-            }
-            group("Page&TableExtension")
-            {
-                Caption = 'Page & Page Extension';
-                Visible = PageTabVisible;
-
-                field(PageObjectType; Rec."Page Type") { }
-                field(PageObjectName; Rec."Object Name") { }
-                field(PageObjectCaption; Rec."Object Caption") { }
-                field(PageObjectCaptionJpn; Rec."Object Caption (Japanese)") { }
-                group(PageExtensionRelatedPage)
-                {
-                    ShowCaption = false;
-                    Visible = Rec."Object Type" = Rec."Object Type"::"Page";
-                    field(PageSourceObjectID; Rec."Source Object ID") { }
-                    field(PageSourceObjectName; Rec."Source Object Name") { }
-                }
-                group(PageExtensionRelated)
-                {
-                    ShowCaption = false;
-                    Visible = Rec."Object Type" = Rec."Object Type"::"PageExtension";
-                    field(PageExtendsObjectType; Rec."Extends Object Type") { }
-                    field(PageExtendsObjectID; Rec."Extends Object ID") { }
-                    field(PageExtendsObjectName; Rec."Extends Object Name") { }
-                }
-                field(PageObjectElement; Rec."Object Element") { }
-                field(PageFieldName; Rec."Field Name") { }
-                field(PageFieldCaption; Rec."Field Caption") { }
-                field(PageFieldCaptionJpn; Rec."Field Caption (Japanese)") { }
-                field(PageToolTip; Rec.ToolTip) { }
-                field(PageToolTipJpn; Rec."ToolTip (Japanese)") { }
             }
             part(Lines; "Japanese Objects Subform")
             {
                 ApplicationArea = Basic, Suite;
-                SubPageLink = "App Name" = field("App Name"), "Object Type" = field("Object Type"), "Object ID" = field("Object ID");
+                SubPageLink = "Entry No." = field("Entry No.");
                 UpdatePropagation = Both;
             }
         }

@@ -46,30 +46,6 @@ page 99108 "Japanese Objects List"
                 {
                     ApplicationArea = Basic, Suite;
                 }
-                field("Field ID"; Rec."Field ID")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
-                field("Field Name"; Rec."Field Name")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
-                field("Field Caption"; Rec."Field Caption")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
-                field("Field Caption (Japanese)"; Rec."Field Caption (Japanese)")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
-                field("Field Data Type"; Rec."Field Data Type")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
-                field("Field Length"; Rec."Field Length")
-                {
-                    ApplicationArea = Basic, Suite;
-                }
                 field("Extends Object ID"; Rec."Extends Object ID")
                 {
                     ApplicationArea = Basic, Suite;
