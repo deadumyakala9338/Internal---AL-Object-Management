@@ -16,9 +16,9 @@ page 99106 "Japanese App Information List"
         {
             repeater(General)
             {
-                field("App ID"; Rec."App ID") { }
                 field("App Name"; Rec."App Name") { }
                 field("App Publisher"; Rec."App Publisher") { }
+                field("App ID"; Rec."App ID") { }
                 field("App Package ID"; Rec."App Package ID") { }
             }
         }

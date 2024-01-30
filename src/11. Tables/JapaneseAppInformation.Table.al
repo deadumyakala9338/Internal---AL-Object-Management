@@ -8,7 +8,12 @@ table 99100 "Japanese App Information"
 
     fields
     {
-        field(2; "App ID"; Text[250])
+        field(2; "App Name"; Text[250])
+        {
+            Caption = 'App Name';
+            Editable = false;
+        }
+        field(3; "App ID"; Text[250])
         {
             Caption = 'App ID';
             TableRelation = "NAV App Installed App" where(Publisher = filter('Tectura Japan K.K.'));
@@ -17,20 +22,15 @@ table 99100 "Japanese App Information"
                 NAVAppInstalledApp: Record "NAV App Installed App";
             begin
                 if NAVAppInstalledApp.Get("App ID") then;
-                Rec."App Package ID" := NAVAppInstalledApp."Package ID";
                 Rec."App Name" := NAVAppInstalledApp.Name;
                 Rec."App Publisher" := NAVAppInstalledApp.Publisher;
+                Rec."App Package ID" := DelChr(NAVAppInstalledApp."Package ID", '<>', '{}');
             end;
         }
-        field(3; "App Name"; Text[250])
-        {
-            Caption = 'App Name';
-            Editable = false;
-        }
-        field(5; "App Package ID"; Text[250])
+        field(5; "App Package ID"; Guid)
         {
             Caption = 'App Package ID';
-            //Editable = false;
+            Editable = false;
         }
         field(7; "App Publisher"; Text[250])
         {
@@ -41,14 +41,14 @@ table 99100 "Japanese App Information"
 
     keys
     {
-        key(Key1; "App ID", "App Name")
+        key(Key1; "App Name", "App ID")
         {
             Clustered = true;
         }
     }
     fieldgroups
     {
-        fieldgroup(DropDown; "App ID", "App Name", "App Publisher")
+        fieldgroup(DropDown; "App Name", "App Publisher", "App ID")
         {
         }
     }

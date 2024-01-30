@@ -123,15 +123,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1147336538 - NamedType 1322276160" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You have changed %1 on the objects header, but it has not been changed on the existing objects lines.</source>
-          <note from="Developer" annotates="general" priority="2">You have changed apptype/objecttype/objectid but it has not been changed on the existing object lines.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - NamedType LinesNotUpdatedMsg</note>
-        </trans-unit>
-        <trans-unit id="Table 1147336538 - NamedType 219837695" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You must delete/update the existing object lines manually.</source>
+        <trans-unit id="Table 1147336538 - NamedType 1730306164" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Japanese captions updated. To update Japanese captions, please choose Japanese language from my settings and update.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - NamedType Text019</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - NamedType JpnCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Table 1147336538 - NamedType 1322276160" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is already object lines existing. you can not change anything at this time. Please delete object lines and update again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - NamedType LinesNotUpdatedMsg</note>
         </trans-unit>
         <trans-unit id="Table 1147336538 - Field 2766253784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>App ID</source>
@@ -147,6 +147,16 @@
           <source>App Package ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field App Package ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1147336538 - Field 1313112702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Creation By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Creation By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1147336538 - Field 1407200743 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Creation Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Creation Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1147336538 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Entry No.</source>
@@ -169,9 +179,19 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Extends Object Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1147336538 - Field 2131085588 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TableData,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension</source>
+          <source> ,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Extends Object Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 1147336538 - Field 3708568500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Last Modified By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1147336538 - Field 2626717425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Last Modified Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1147336538 - Field 3811799877 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Caption</source>
@@ -204,7 +224,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Object Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1147336538 - Field 1085746399 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TableData,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension</source>
+          <source> ,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Object Type - Property OptionCaption</note>
         </trans-unit>
@@ -223,6 +243,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Source Object Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2871221953 - Method 826519159 - NamedType 985601854" size-unit="char" translate="yes" xml:space="preserve">
+          <source>n/a</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Method InitHeaderDefaults - NamedType NotApplicableLbl</note>
+        </trans-unit>
         <trans-unit id="Table 2871221953 - Field 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>App Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -238,10 +263,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field App Runtime Package ID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2871221953 - Field 1313112702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Creation By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Creation By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2871221953 - Field 1407200743 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Creation Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Creation Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2871221953 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Entry No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2871221953 - Field 75698567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Element Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Event Element Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2871221953 - Field 609019165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Event Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2871221953 - Field 823559016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field Caption</source>
@@ -283,6 +328,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field IsPartOfPrimaryKey - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2871221953 - Field 3708568500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Last Modified By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2871221953 - Field 2626717425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Last Modified Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2871221953 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -317,6 +372,11 @@
           <source>Option String</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Option String - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2871221953 - Field 3711156646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Procedure Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field Procedure Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2871221953 - Field 3196500189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Relation Field No.</source>
@@ -397,6 +457,16 @@
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3331148031 - Action 1308537989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Japanese Captions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action UpdateJapaneseCaptions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3331148031 - Action 4122532914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Object Details.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action UpdateObjectDetails - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 191907509 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese Objects</source>

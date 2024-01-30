@@ -13,18 +13,11 @@ page 99109 "Japanese Objects Card"
             {
                 Caption = 'General';
                 field("App Name"; Rec."App Name") { }
-                field("Object Type"; Rec."Object Type")
-                {
-                    trigger OnValidate()
-                    begin
-                        InitializeVisibleVariables();
-                    end;
-                }
+                field("Object Type"; Rec."Object Type") { }
                 field("Object ID"; Rec."Object ID") { }
                 field("Object Name"; Rec."Object Name") { }
                 field("Object Caption"; Rec."Object Caption") { }
                 field("Object Caption (Japanese)"; Rec."Object Caption (Japanese)") { }
-
                 field("Extends Object Type"; Rec."Extends Object Type") { }
                 field("Extends Object ID"; Rec."Extends Object ID") { }
                 field("Extends Object Name"; Rec."Extends Object Name") { }
@@ -33,7 +26,10 @@ page 99109 "Japanese Objects Card"
                     Editable = Rec."Object Type" = Rec."Object Type"::"Page";
                 }
                 field("Source Object Name"; Rec."Source Object Name") { }
-                field("Object Category"; Rec."Object Category") { }
+                field("Creation By"; Rec."Creation By") { }
+                field("Creation Date"; Rec."Creation Date") { }
+                field("Last Modified By"; Rec."Last Modified By") { }
+                field("Last Modified Date"; Rec."Last Modified Date") { }
             }
             part(Lines; "Japanese Objects Subform")
             {
@@ -43,51 +39,37 @@ page 99109 "Japanese Objects Card"
             }
         }
     }
-    trigger OnOpenPage()
-    begin
-        InitializeVisibleVariables();
-    end;
+    actions
+    {
+        area(Processing)
+        {
+            action(UpdateObjectDetails)
+            {
+                Caption = 'Update Object Details.';
+                ApplicationArea = Basic, Suite;
+                Image = UpdateDescription;
 
-    trigger OnAfterGetRecord()
-    begin
-        InitializeVisibleVariables();
-    end;
+                trigger OnAction()
+                var
+                    JapaneseObjectsHeader: Record "Japanese Objects Header";
+                begin
+                    JapaneseObjectsHeader.UpdateJapaneseObjectLineDetails(Rec);
+                end;
+            }
+            action(UpdateJapaneseCaptions)
+            {
+                Caption = 'Update Japanese Captions.';
+                ApplicationArea = Basic, Suite;
+                Image = UpdateDescription;
 
-    var
-        TableTabVisible, PageTabVisible, ReportTabVisible, CodeunitTabVisible, PermSetTabVisible, ProfileTabVisible : Boolean;
-        InsertRecord: Boolean;
-
-    local procedure InitializeVisibleVariables()
-    begin
-        TableTabVisible := false;
-        PageTabVisible := false;
-        ReportTabVisible := false;
-        CodeunitTabVisible := false;
-        PermSetTabVisible := false;
-        ProfileTabVisible := false;
-
-        case Rec."Object Type" of
-            Rec."Object Type"::"TableData":
-                SetTabsVisible(true, false, false, false, false, false);
-            Rec."Object Type"::"Table":
-                SetTabsVisible(true, false, false, false, false, false);
-            Rec."Object Type"::"TableExtension":
-                SetTabsVisible(true, false, false, false, false, false);
-            Rec."Object Type"::"Page":
-                SetTabsVisible(false, true, false, false, false, false);
-            Rec."Object Type"::"PageExtension":
-                SetTabsVisible(false, true, false, false, false, false);
-        end;
-    end;
-
-    local procedure SetTabsVisible(NewTableTabVisible: Boolean; NewPageTabVisible: Boolean; NewReportTabVisible: Boolean;
-                                   NewCodeunitTabVisible: Boolean; NewPermSetTabVisible: Boolean; NewProfileTabVisible: Boolean)
-    begin
-        TableTabVisible := NewTableTabVisible;
-        PageTabVisible := NewPageTabVisible;
-        ReportTabVisible := NewReportTabVisible;
-        CodeunitTabVisible := NewCodeunitTabVisible;
-        PermSetTabVisible := NewPermSetTabVisible;
-        ProfileTabVisible := NewProfileTabVisible;
-    end;
+                trigger OnAction()
+                var
+                    JapaneseObjectsHeader: Record "Japanese Objects Header";
+                begin
+                    JapaneseObjectsHeader.UpdateJapaneseCaptionHeader(Rec);
+                    JapaneseObjectsHeader.UpdateJapaneseCaptionLines(Rec);
+                end;
+            }
+        }
+    }
 }

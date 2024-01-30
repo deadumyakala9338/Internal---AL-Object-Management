@@ -56,17 +56,14 @@ table 99105 "Japanese Objects Line"
         field(12; "Field Name"; Text[30])
         {
             Caption = 'Field Name';
-            Editable = false;
         }
         field(13; "Field Caption"; Text[100])
         {
             Caption = 'Field Caption';
-            Editable = false;
         }
         field(14; "Field Caption (Japanese)"; Text[100])
         {
             Caption = 'Field Caption (Japanese)';
-            Editable = false;
         }
         field(15; "ToolTip"; Text[500])
         {
@@ -76,49 +73,81 @@ table 99105 "Japanese Objects Line"
         {
             Caption = 'ToolTip (Japanese)';
         }
-        field(46; "Field Data Type"; Text[50])
+        field(20; "Field Data Type"; Text[50])
         {
             Caption = 'Field Data Type';
-            Editable = false;
         }
-        field(47; "Field Length"; Text[5])
+        field(21; "Field Length"; Text[5])
         {
             Caption = 'Field Length';
-            Editable = false;
         }
-        field(25; "Field Class"; Text[50])
+        field(22; "Field Class"; Text[50])
         {
             Caption = 'Field Class';
             Editable = false;
         }
-        field(33; "Relation Table No."; Integer)
+        field(23; "Relation Table No."; Integer)
         {
             Caption = 'Relation Table No.';
             Editable = false;
         }
-        field(34; "Relation Field No."; Integer)
+        field(24; "Relation Field No."; Integer)
         {
             Caption = 'Relation Field No.';
             Editable = false;
         }
-        field(40; "Option String"; Text[2047])
+        field(25; "Option String"; Text[2047])
         {
             Caption = 'Option String';
             Editable = false;
         }
-        field(43; IsPartOfPrimaryKey; Boolean)
+        field(26; IsPartOfPrimaryKey; Boolean)
         {
             Caption = 'IsPartOfPrimaryKey';
             Editable = false;
         }
-        field(44; "App Package ID"; Guid)
+        field(27; "App Package ID"; Guid)
         {
             Caption = 'App Package ID';
             Editable = false;
         }
-        field(45; "App Runtime Package ID"; Guid)
+        field(28; "App Runtime Package ID"; Guid)
         {
             Caption = 'App Runtime Package ID';
+            Editable = false;
+        }
+        field(30; "Procedure Name"; Text[200])
+        {
+            Caption = 'Procedure Name';
+        }
+        field(31; "Event Name"; Text[100])
+        {
+            Caption = 'Event Name';
+        }
+        field(32; "Event Element Name"; Text[100])
+        {
+            Caption = 'Event Element Name';
+        }
+        field(60; "Creation By"; Code[50])
+        {
+            Caption = 'Creation By';
+            TableRelation = "User Setup";
+            Editable = false;
+        }
+        field(61; "Creation Date"; Date)
+        {
+            Caption = 'Creation Date';
+            Editable = false;
+        }
+        field(62; "Last Modified By"; Code[50])
+        {
+            Caption = 'Last Modified By';
+            TableRelation = "User Setup";
+            Editable = false;
+        }
+        field(63; "Last Modified Date"; Date)
+        {
+            Caption = 'Last Modified Date';
             Editable = false;
         }
     }
@@ -133,8 +162,19 @@ table 99105 "Japanese Objects Line"
         {
         }
     }
+    trigger OnInsert()
+    begin
+        "Creation By" := UserId;
+        "Creation Date" := WorkDate();
+    end;
 
-    local procedure UpdateTableFieldInfo()
+    trigger OnModify()
+    begin
+        "Last Modified By" := UserId;
+        "Last Modified Date" := WorkDate();
+    end;
+
+    procedure UpdateTableFieldInfo()
     var
         RecField: Record Field;
     begin
@@ -166,10 +206,20 @@ table 99105 "Japanese Objects Line"
     end;
 
     procedure InitHeaderDefaults(JapaneseObjectsHeader: Record "Japanese Objects Header")
+    var
+        NotApplicableLbl: Label 'n/a';
     begin
         "App Name" := JapaneseObjectsHeader."App Name";
         "Object Type" := JapaneseObjectsHeader."Object Type";
         "Object ID" := JapaneseObjectsHeader."Object ID";
+        if "Object Element" = "Object Element"::"Procedure" then begin
+            "Field Caption" := NotApplicableLbl;
+            "Field Caption (Japanese)" := NotApplicableLbl;
+            "Field Data Type" := NotApplicableLbl;
+            "Field Length" := NotApplicableLbl;
+            "Field Class" := NotApplicableLbl;
+            "Option String" := NotApplicableLbl;
+        end;
     end;
 
     var
