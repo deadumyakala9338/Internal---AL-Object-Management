@@ -2,7 +2,7 @@ page 99110 "Japanese Objects Subform"
 {
     AutoSplitKey = true;
     ApplicationArea = All;
-    Caption = 'Lines';
+    Caption = 'Object Lines';
     DelayedInsert = true;
     LinksAllowed = false;
     MultipleNewLines = true;
@@ -16,37 +16,13 @@ page 99110 "Japanese Objects Subform"
             repeater(General)
             {
                 field("Object Element"; Rec."Object Element") { }
-                field("Field ID"; Rec."Field ID")
-                {
-                    Editable = Rec."Object Type" = Rec."Object Type"::"Table";
-                }
-                field("Field Name"; Rec."Field Name")
-                {
-                }
-                field("Field Caption"; Rec."Field Caption")
-                {
-                }
-                field("Field Caption (Japanese)"; Rec."Field Caption (Japanese)")
-                {
-                }
-                field("Field Data Type"; Rec."Field Data Type")
-                {
-                }
-                field("Field Length"; Rec."Field Length")
-                {
-                }
-                field(IsPartOfPrimaryKey; Rec.IsPartOfPrimaryKey)
-                {
-                }
-                field("Procedure Name"; Rec."Procedure Name")
-                {
-                }
-                field("Event Name"; Rec."Event Name")
-                {
-                }
-                field("Event Element Name"; Rec."Event Element Name")
-                {
-                }
+                field("Field ID"; Rec."Field ID") { }
+                field("Field Name"; Rec."Field Name") { }
+                field("Field Caption"; Rec."Field Caption") { }
+                field("Field Caption (Japanese)"; Rec."Field Caption (Japanese)") { }
+                field("Field Data Type"; Rec."Field Data Type") { }
+                field("Field Length"; Rec."Field Length") { }
+                field(IsPartOfPrimaryKey; Rec.IsPartOfPrimaryKey) { }
             }
         }
     }

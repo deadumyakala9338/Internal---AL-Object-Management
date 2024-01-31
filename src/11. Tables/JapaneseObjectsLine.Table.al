@@ -116,9 +116,9 @@ table 99105 "Japanese Objects Line"
             Caption = 'App Runtime Package ID';
             Editable = false;
         }
-        field(30; "Procedure Name"; Text[200])
+        field(30; "Name"; Text[200])
         {
-            Caption = 'Procedure Name';
+            Caption = 'Name';
         }
         field(31; "Event Name"; Text[100])
         {
@@ -127,6 +127,10 @@ table 99105 "Japanese Objects Line"
         field(32; "Event Element Name"; Text[100])
         {
             Caption = 'Event Element Name';
+        }
+        field(33; "Brief"; Text[1024])
+        {
+            Caption = 'Brief';
         }
         field(60; "Creation By"; Code[50])
         {

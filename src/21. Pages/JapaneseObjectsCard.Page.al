@@ -13,7 +13,13 @@ page 99109 "Japanese Objects Card"
             {
                 Caption = 'General';
                 field("App Name"; Rec."App Name") { }
-                field("Object Type"; Rec."Object Type") { }
+                field("Object Type"; Rec."Object Type")
+                {
+                    trigger OnValidate()
+                    begin
+                        InitializeVisibleVariables();
+                    end;
+                }
                 field("Object ID"; Rec."Object ID") { }
                 field("Object Name"; Rec."Object Name") { }
                 field("Object Caption"; Rec."Object Caption") { }
@@ -31,11 +37,40 @@ page 99109 "Japanese Objects Card"
                 field("Last Modified By"; Rec."Last Modified By") { }
                 field("Last Modified Date"; Rec."Last Modified Date") { }
             }
-            part(Lines; "Japanese Objects Subform")
+            part(LinesTable; "Japanese Objects Subform")
             {
                 ApplicationArea = Basic, Suite;
                 SubPageLink = "Entry No." = field("Entry No.");
                 UpdatePropagation = Both;
+                Visible = TablePageVisible;
+            }
+            part(LinesPage; "Japanese Objects Subform Page")
+            {
+                ApplicationArea = Basic, Suite;
+                SubPageLink = "Entry No." = field("Entry No.");
+                UpdatePropagation = Both;
+                Visible = PagePageVisible;
+            }
+            part(LinesCU; "Japanese Objects Subform CU")
+            {
+                ApplicationArea = Basic, Suite;
+                SubPageLink = "Entry No." = field("Entry No.");
+                UpdatePropagation = Both;
+                Visible = CodeunitPageVisible;
+            }
+            part(LinesRep; "Japanese Objects Subform Rep.")
+            {
+                ApplicationArea = Basic, Suite;
+                SubPageLink = "Entry No." = field("Entry No.");
+                UpdatePropagation = Both;
+                Visible = ReportPagedVisible;
+            }
+            part(LinesOther; "Japanese Objects Subform Other")
+            {
+                ApplicationArea = Basic, Suite;
+                SubPageLink = "Entry No." = field("Entry No.");
+                UpdatePropagation = Both;
+                Visible = OthersPageVisible;
             }
         }
     }
@@ -72,4 +107,53 @@ page 99109 "Japanese Objects Card"
             }
         }
     }
+    trigger OnOpenPage()
+    begin
+        InitializeVisibleVariables();
+    end;
+
+    trigger OnAfterGetRecord()
+    begin
+        InitializeVisibleVariables();
+    end;
+
+    var
+        TablePageVisible, PagePageVisible, CodeunitPageVisible, ReportPagedVisible, OthersPageVisible : Boolean;
+
+    local procedure InitializeVisibleVariables()
+    begin
+        TablePageVisible := false;
+        CodeunitPageVisible := false;
+        ReportPagedVisible := false;
+        OthersPageVisible := false;
+
+        case Rec."Object Type" of
+            Rec."Object Type"::"Table":
+                SetJpnLineFieldsVisible(true, false, false, false, false);
+            Rec."Object Type"::"TableExtension":
+                SetJpnLineFieldsVisible(true, false, false, false, false);
+            Rec."Object Type"::"Page":
+                SetJpnLineFieldsVisible(false, true, false, false, false);
+            Rec."Object Type"::"PageExtension":
+                SetJpnLineFieldsVisible(false, true, false, false, false);
+            Rec."Object Type"::"Codeunit":
+                SetJpnLineFieldsVisible(false, false, true, false, false);
+            Rec."Object Type"::"Report":
+                SetJpnLineFieldsVisible(false, false, false, true, false);
+            Rec."Object Type"::"PermissionSet":
+                SetJpnLineFieldsVisible(false, false, false, false, true);
+            Rec."Object Type"::"PermissionSetExtension":
+                SetJpnLineFieldsVisible(false, false, false, false, true);
+        end;
+    end;
+
+    local procedure SetJpnLineFieldsVisible(NewTablePageVisible: Boolean; NewPagePageVisible: Boolean; NewCodeunitPageVisible: Boolean;
+                                            NewReportPagedVisible: Boolean; NewOthersPageVisible: Boolean)
+    begin
+        TablePageVisible := NewTablePageVisible;
+        PagePageVisible := NewPagePageVisible;
+        CodeunitPageVisible := NewCodeunitPageVisible;
+        ReportPagedVisible := NewReportPagedVisible;
+        OthersPageVisible := NewOthersPageVisible;
+    end;
 }
