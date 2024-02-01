@@ -27,10 +27,7 @@ page 99109 "Japanese Objects Card"
                 field("Extends Object Type"; Rec."Extends Object Type") { }
                 field("Extends Object ID"; Rec."Extends Object ID") { }
                 field("Extends Object Name"; Rec."Extends Object Name") { }
-                field("Source Object ID"; Rec."Source Object ID")
-                {
-                    Editable = Rec."Object Type" = Rec."Object Type"::"Page";
-                }
+                field("Source Object ID"; Rec."Source Object ID") { }
                 field("Source Object Name"; Rec."Source Object Name") { }
                 field("Creation By"; Rec."Creation By") { }
                 field("Creation Date"; Rec."Creation Date") { }
@@ -74,13 +71,14 @@ page 99109 "Japanese Objects Card"
             }
         }
     }
+
     actions
     {
         area(Processing)
         {
             action(UpdateObjectDetails)
             {
-                Caption = 'Update Object Details.';
+                Caption = 'Insert Table Linese';
                 ApplicationArea = Basic, Suite;
                 Image = UpdateDescription;
 
@@ -101,6 +99,7 @@ page 99109 "Japanese Objects Card"
                 var
                     JapaneseObjectsHeader: Record "Japanese Objects Header";
                 begin
+                    System.GlobalLanguage(1041);
                     JapaneseObjectsHeader.UpdateJapaneseCaptionHeader(Rec);
                     JapaneseObjectsHeader.UpdateJapaneseCaptionLines(Rec);
                 end;
@@ -117,8 +116,17 @@ page 99109 "Japanese Objects Card"
         InitializeVisibleVariables();
     end;
 
+    trigger OnClosePage()
+    var
+        JapaneseObjectsHeader: Record "Japanese Objects Header";
+    begin
+        System.GlobalLanguage(1041);
+        JapaneseObjectsHeader.UpdateJapaneseCaptionHeader(Rec);
+    end;
+
     var
         TablePageVisible, PagePageVisible, CodeunitPageVisible, ReportPagedVisible, OthersPageVisible : Boolean;
+        UpdateJpnCaption: Boolean;
 
     local procedure InitializeVisibleVariables()
     begin

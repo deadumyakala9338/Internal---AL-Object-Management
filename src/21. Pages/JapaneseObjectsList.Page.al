@@ -6,6 +6,7 @@ page 99108 "Japanese Objects List"
     PageType = List;
     SourceTable = "Japanese Objects Header";
     UsageCategory = Lists;
+    ModifyAllowed = false;
 
     layout
     {

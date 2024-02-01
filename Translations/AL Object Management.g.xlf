@@ -469,7 +469,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action UpdateJapaneseCaptions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3331148031 - Action 4122532914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Update Object Details.</source>
+          <source>Insert Table Linese</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action UpdateObjectDetails - Property Caption</note>
         </trans-unit>

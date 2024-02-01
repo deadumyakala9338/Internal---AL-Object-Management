@@ -188,6 +188,11 @@ table 99106 "Japanese Objects Header"
     end;
 
     trigger OnModify()
+    var
+        AllObjWithCaption: Record AllObjWithCaption;
+        MySessionSettings: SessionSettings;
+        LangCode: Integer;
+        GlobalLangID: Integer;
     begin
         "Last Modified By" := UserId;
         "Last Modified Date" := WorkDate();
@@ -209,39 +214,35 @@ table 99106 "Japanese Objects Header"
     var
         AllObjWithCaption: Record AllObjWithCaption;
         TranslationHelper: Codeunit "Translation Helper";
+
     begin
-        begin
-            AllObjWithCaption.Reset();
-            AllObjWithCaption.SetCurrentKey("Object Type", "Object ID");
-            AllObjWithCaption.SetRange("Object Type", Rec."Object Type");
-            AllObjWithCaption.SetRange("App Package ID", Rec."App Package ID");
-            if AllObjWithCaption.FindFirst() then;
-            if Page.RunModal(Page::"All Objects with Caption", AllObjWithCaption) = Action::LookupOK then begin
-                Rec."Object ID" := AllObjWithCaption."Object ID";
-                Rec."Object Name" := AllObjWithCaption."Object Name";
-                Rec."Object Caption" := AllObjWithCaption."Object Caption";
-                if GlobalLanguage <> 1041 then
-                    Rec."Object Caption (Japanese)" := '';
-                //Rec."Object Caption (Japanese)" := TranslationHelper.GetTranslatedFieldCaption('JPN', Rec."Object ID", Rec.FieldNo("Object Caption"));
-                if (Rec."Object Type" = Rec."Object Type"::"TableExtension") then begin
-                    Rec."Extends Object Type" := Rec."Extends Object Type"::"Table";
-                    Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
-                end;
-                if (Rec."Object Type" = Rec."Object Type"::"PageExtension") then begin
-                    Rec."Extends Object Type" := Rec."Extends Object Type"::"Page";
-                    Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
-                end;
-                if (Rec."Object Type" = Rec."Object Type"::"ReportExtension") then begin
-                    Rec."Extends Object Type" := Rec."Extends Object Type"::"Report";
-                    Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
-                end;
-                if (Rec."Object Type" = Rec."Object Type"::"EnumExtension") then begin
-                    Rec."Extends Object Type" := Rec."Extends Object Type"::"Enum";
-                    Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
-                end;
-                if (Rec."Object Type" = Rec."Object Type"::"Page") then
-                    Rec."Page Type" := AllObjWithCaption."Object Subtype";
+        AllObjWithCaption.Reset();
+        AllObjWithCaption.SetCurrentKey("Object Type", "Object ID");
+        AllObjWithCaption.SetRange("Object Type", Rec."Object Type");
+        AllObjWithCaption.SetRange("App Package ID", Rec."App Package ID");
+        if AllObjWithCaption.FindFirst() then;
+        if Page.RunModal(Page::"All Objects with Caption", AllObjWithCaption) = Action::LookupOK then begin
+            Rec."Object ID" := AllObjWithCaption."Object ID";
+            Rec."Object Name" := AllObjWithCaption."Object Name";
+            Rec."Object Caption" := AllObjWithCaption."Object Caption";
+            if (Rec."Object Type" = Rec."Object Type"::"TableExtension") then begin
+                Rec."Extends Object Type" := Rec."Extends Object Type"::"Table";
+                Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
             end;
+            if (Rec."Object Type" = Rec."Object Type"::"PageExtension") then begin
+                Rec."Extends Object Type" := Rec."Extends Object Type"::"Page";
+                Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
+            end;
+            if (Rec."Object Type" = Rec."Object Type"::"ReportExtension") then begin
+                Rec."Extends Object Type" := Rec."Extends Object Type"::"Report";
+                Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
+            end;
+            if (Rec."Object Type" = Rec."Object Type"::"EnumExtension") then begin
+                Rec."Extends Object Type" := Rec."Extends Object Type"::"Enum";
+                Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
+            end;
+            if (Rec."Object Type" = Rec."Object Type"::"Page") then
+                Rec."Page Type" := AllObjWithCaption."Object Subtype";
         end;
     end;
 
