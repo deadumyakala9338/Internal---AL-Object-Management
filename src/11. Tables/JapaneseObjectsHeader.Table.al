@@ -29,6 +29,7 @@ table 99106 "Japanese Objects Header"
                 if JapaneseAppInformation.FindFirst() then;
                 Rec."App ID" := JapaneseAppInformation."App ID";
                 Rec."App Package ID" := JapaneseAppInformation."App Package ID";
+                Rec."App Runtime Package ID" := JapaneseAppInformation."App Runtime Package ID";
 
                 if (Rec."App Name" <> xRec."App Name") or (Rec."App Name" = '') then begin
                     "Object Type" := "Object Type"::" ";
@@ -82,6 +83,11 @@ table 99106 "Japanese Objects Header"
         field(6; "App Package ID"; Text[250])
         {
             Caption = 'App Package ID';
+            Editable = false;
+        }
+        field(7; "App Runtime Package ID"; Text[250])
+        {
+            Caption = 'App Runtime Package ID';
             Editable = false;
         }
         field(10; "Object Category"; Enum "Object Category TJP")
@@ -219,11 +225,13 @@ table 99106 "Japanese Objects Header"
         AllObjWithCaption.Reset();
         AllObjWithCaption.SetCurrentKey("Object Type", "Object ID");
         AllObjWithCaption.SetRange("Object Type", Rec."Object Type");
-        AllObjWithCaption.SetRange("App Package ID", Rec."App Package ID");
+        AllObjWithCaption.SetRange("App Runtime Package ID", Rec."App Runtime Package ID");
+        //AllObjWithCaption.SetRange("App Package ID", Rec."App Package ID");
         if AllObjWithCaption.FindFirst() then;
         if Page.RunModal(Page::"All Objects with Caption", AllObjWithCaption) = Action::LookupOK then begin
             Rec."Object ID" := AllObjWithCaption."Object ID";
             Rec."Object Name" := AllObjWithCaption."Object Name";
+            Rec."Object Caption (Japanese)" := '';
             Rec."Object Caption" := AllObjWithCaption."Object Caption";
             if (Rec."Object Type" = Rec."Object Type"::"TableExtension") then begin
                 Rec."Extends Object Type" := Rec."Extends Object Type"::"Table";
@@ -370,6 +378,7 @@ table 99106 "Japanese Objects Header"
         Clear("Extends Object Name");
     end;
 
+    /*
     procedure InsertObjectChangeLog()
     var
         JpnChangelogHeader: Record "Japanese Changelog Header";
@@ -393,7 +402,7 @@ table 99106 "Japanese Objects Header"
             end;
         end;
     end;
-
+    */
     procedure ErrorIfSalesLinesExist(ChangedFieldName: Text[100]; JapaneseObjectsHeader: Record "Japanese Objects Header")
     var
         MessageText: Text;

@@ -28,40 +28,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese App Information - Field App Publisher - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1457300582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Japanese Changelog Header</source>
+        <trans-unit id="Table 1122011550 - Field 4267837798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Runtime Package ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1457300582 - NamedType 4269661899" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The change log header %1 %2 already exists.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - NamedType Text051</note>
-        </trans-unit>
-        <trans-unit id="Table 1457300582 - Field 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>App Name</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field App Name - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1457300582 - Field 1686929801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Change Remarks</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field Change Remarks - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1457300582 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field No. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1457300582 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No. Series</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field No. Series - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1457300582 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Posting Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Header - Field Posting Date - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese App Information - Field App Runtime Package ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3930405293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese Changelog Line</source>
@@ -73,25 +43,50 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field App Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3930405293 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Document No.</source>
+        <trans-unit id="Table 3930405293 - Field 3651464122 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Log Reason</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Document No. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Change Log Reason - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3930405293 - Field 1347689408 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Line Change Log</source>
+        <trans-unit id="Table 3930405293 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Line Change Log - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3930405293 - Field 3708568500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Last Modified By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3930405293 - Field 2626717425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Last Modified Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3930405293 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Line No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3930405293 - Field 838860114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log Creation By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Log Creation By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3930405293 - Field 862638483 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log Creation Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Log Creation Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3930405293 - Field 3711240756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Object ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3930405293 - Field 1418569422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Object Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3930405293 - Field 1085746399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Type</source>
@@ -102,21 +97,6 @@
           <source>TableData,Table,,Report,,Codeunit,XMLport,MenuSuite,Page,Query,System,FieldNumber,,,PageExtension,TableExtension,Enum,EnumExtension,Profile,ProfileExtension,PermissionSet,PermissionSetExtension,ReportExtension</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Line - Field Object Type - Property OptionCaption</note>
-        </trans-unit>
-        <trans-unit id="Table 1887446382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Japanese Changelog Setup</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Setup - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1887446382 - Field 841643200 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Enhancement Nos.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Setup - Field Enhancement Nos. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1887446382 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Primary Key</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Changelog Setup - Field Primary Key - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1147336538 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese Objects Header</source>
@@ -147,6 +127,11 @@
           <source>App Package ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field App Package ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1147336538 - Field 4267837798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Runtime Package ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field App Runtime Package ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1147336538 - Field 1313112702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Creation By</source>
@@ -418,40 +403,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese App Information List - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3395658079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Japanese ChangeLog</source>
+        <trans-unit id="Page 249598476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Changelog Entry</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Obj. Changelog Entry - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3395658079 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>General</source>
+        <trans-unit id="Page 1468850045 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese Object Changelogs</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog - Control General - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3395658079 - Action 3618938624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Open Change Log Document.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog - Action ExportTemplate - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 879203305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Japanese Changelogs</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog List - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1887446382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Japanese Changelog Setup</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog Setup - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1887446382 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>General</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog Setup - Control General - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1437376985 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Lines</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Changelog Subform - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Object Changelogs - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3331148031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese Objects</source>
@@ -462,6 +422,16 @@
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3331148031 - Action 910196301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Object Change Log.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action CreateObjectChangeLog - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3331148031 - Action 297723848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Changelog Entry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action JapaneseObjectChangeLogEntry - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3331148031 - Action 1308537989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update Japanese Captions.</source>
@@ -512,6 +482,21 @@
           <source>Object Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Subform Rep. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1833355716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Log Creation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Japanese Object Change Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1833355716 - Control 828292189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Japanese Object Change Logs.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Japanese Object Change Log - Control Option - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1833355716 - Control 4178684280 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Define Change Log Reason</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Japanese Object Change Log - Control SetChangeLogReason - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2281215205 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

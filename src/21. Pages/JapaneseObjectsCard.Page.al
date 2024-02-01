@@ -104,6 +104,28 @@ page 99109 "Japanese Objects Card"
                     JapaneseObjectsHeader.UpdateJapaneseCaptionLines(Rec);
                 end;
             }
+            action(CreateObjectChangeLog)
+            {
+                Caption = 'Create Object Change Log.';
+                ApplicationArea = Basic, Suite;
+                Image = InsertFromCheckJournal;
+
+                trigger OnAction()
+                var
+                    JapaneseObjectChangeLog: Report "Japanese Object Change Log";
+                begin
+                    JapaneseObjectChangeLog.SetObjectInfo(Rec."Entry No.");
+                    JapaneseObjectChangeLog.RunModal();
+                end;
+            }
+            action(JapaneseObjectChangeLogEntry)
+            {
+                Caption = 'Object Changelog Entry';
+                ApplicationArea = Basic, Suite;
+                Image = LedgerEntries;
+                RunObject = page "Japanese Obj. Changelog Entry";
+                RunPageLink = "Entry No." = field("Entry No.");
+            }
         }
     }
     trigger OnOpenPage()
