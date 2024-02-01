@@ -37,11 +37,6 @@ table 99104 "Japanese Changelog Line"
         field(21; "Change Log Reason"; Text[1024])
         {
             Caption = 'Change Log Reason';
-            trigger OnValidate()
-            begin
-                if "Change Log Reason" <> '' then
-                    UpdateChangeLogInfo();
-            end;
         }
         field(60; "Log Creation By"; Code[50])
         {
@@ -86,21 +81,5 @@ table 99104 "Japanese Changelog Line"
     begin
         "Last Modified By" := UserId;
         "Last Modified Date" := WorkDate();
-    end;
-
-    procedure UpdateChangeLogInfo()
-    var
-        JapaneseObjectsHeader: Record "Japanese Objects Header";
-        JapaneseChangelogLine: Record "Japanese Changelog Line";
-    begin
-        JapaneseObjectsHeader.Reset();
-        JapaneseObjectsHeader.SetCurrentKey("Entry No.");
-        JapaneseObjectsHeader.SetRange("Entry No.", Rec."Entry No.");
-        if JapaneseObjectsHeader.FindFirst() then begin
-            Rec."App Name" := JapaneseObjectsHeader."App Name";
-            Rec."Object Type" := JapaneseObjectsHeader."Object Type";
-            Rec."Object ID" := JapaneseObjectsHeader."Object ID";
-            Rec."Object Name" := JapaneseObjectsHeader."Object Name";
-        end;
     end;
 }

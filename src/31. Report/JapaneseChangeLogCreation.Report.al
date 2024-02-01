@@ -37,8 +37,9 @@ report 99100 "Japanese Object Change Log"
         JapaneseObjectsHeader.SetRange("Entry No.", ObjectEntryNo);
         if JapaneseObjectsHeader.FindFirst() then begin
             JapaneseChangelogLine.Init();
+            FindLastLogEntryLineNo(ObjectEntryNo);
             JapaneseChangelogLine."Entry No." := ObjectEntryNo;
-            JapaneseChangelogLine."Line No." := FindLastLogEntryLineNo(ObjectEntryNo);
+            JapaneseChangelogLine."Line No." := LastLogEntryLineNo;
             JapaneseChangelogLine."App Name" := JapaneseObjectsHeader."App Name";
             JapaneseChangelogLine."Object Type" := JapaneseObjectsHeader."Object Type";
             JapaneseChangelogLine."Object ID" := JapaneseObjectsHeader."Object ID";
@@ -61,6 +62,7 @@ report 99100 "Japanese Object Change Log"
     var
         JapaneseChangelogLine: Record "Japanese Changelog Line";
     begin
+        Clear(LastLogEntryLineNo);
         JapaneseChangelogLine.Reset();
         JapaneseChangelogLine.SetCurrentKey("Entry No.");
         JapaneseChangelogLine.SetRange("Entry No.", pObjectEntryNo);

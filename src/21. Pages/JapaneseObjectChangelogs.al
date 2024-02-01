@@ -5,7 +5,7 @@ page 99104 "Japanese Object Changelogs"
     LinksAllowed = false;
     PageType = List;
     SourceTable = "Japanese Changelog Line";
-    DeleteAllowed = false;
+    //DeleteAllowed = false;
     InsertAllowed = false;
     UsageCategory = Lists;
 
