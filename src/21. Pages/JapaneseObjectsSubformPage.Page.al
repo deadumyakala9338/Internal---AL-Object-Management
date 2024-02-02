@@ -19,8 +19,6 @@ page 99111 "Japanese Objects Subform Page"
                 field("Field Name"; Rec."Field Name") { }
                 field("Field Caption"; Rec."Field Caption") { }
                 field("Field Caption (Japanese)"; Rec."Field Caption (Japanese)") { }
-                field("Field Data Type"; Rec."Field Data Type") { }
-                field("Field Length"; Rec."Field Length") { }
                 field(ToolTip; Rec.ToolTip) { }
                 field("ToolTip (Japanese)"; Rec."ToolTip (Japanese)") { }
             }

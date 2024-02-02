@@ -236,18 +236,22 @@ table 99106 "Japanese Objects Header"
             if (Rec."Object Type" = Rec."Object Type"::"TableExtension") then begin
                 Rec."Extends Object Type" := Rec."Extends Object Type"::"Table";
                 Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
+                Validate(Rec."Extends Object ID");
             end;
             if (Rec."Object Type" = Rec."Object Type"::"PageExtension") then begin
                 Rec."Extends Object Type" := Rec."Extends Object Type"::"Page";
                 Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
+                Validate(Rec."Extends Object ID");
             end;
             if (Rec."Object Type" = Rec."Object Type"::"ReportExtension") then begin
                 Rec."Extends Object Type" := Rec."Extends Object Type"::"Report";
                 Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
+                Validate(Rec."Extends Object ID");
             end;
             if (Rec."Object Type" = Rec."Object Type"::"EnumExtension") then begin
                 Rec."Extends Object Type" := Rec."Extends Object Type"::"Enum";
                 Evaluate(Rec."Extends Object ID", AllObjWithCaption."Object Subtype");
+                Validate(Rec."Extends Object ID");
             end;
             if (Rec."Object Type" = Rec."Object Type"::"Page") then
                 Rec."Page Type" := AllObjWithCaption."Object Subtype";
@@ -265,9 +269,15 @@ table 99106 "Japanese Objects Header"
 
         FieldInfo.Reset();
         FieldInfo.SetCurrentKey(TableNo);
-        FieldInfo.SetRange(TableNo, JapaneseObjectsHeader."Object ID");
-        FieldInfo.SetFilter("No.", '<%1', 2000000000);
-        if FieldInfo.FindFirst() then
+        if JapaneseObjectsHeader."Object Type" = JapaneseObjectsHeader."Object Type"::"Table" then begin
+            FieldInfo.SetRange(TableNo, JapaneseObjectsHeader."Object ID");
+            FieldInfo.SetFilter("No.", '<%1', 2000000000);
+        end;
+        if JapaneseObjectsHeader."Object Type" = JapaneseObjectsHeader."Object Type"::"TableExtension" then begin
+            FieldInfo.SetRange(TableNo, JapaneseObjectsHeader."Extends Object ID");
+            FieldInfo.SetFilter("No.", '%1..%2', 70658575, 70659574);
+        end;
+        if FieldInfo.FindSet() then
             repeat
                 JapaneseObjectsLine.Init();
                 JapaneseObjectsLine."Entry No." := JapaneseObjectsHeader."Entry No.";
@@ -279,7 +289,10 @@ table 99106 "Japanese Objects Header"
                 JapaneseObjectsLine."Field ID" := FieldInfo."No.";
                 JapaneseObjectsLine."Field Name" := FieldInfo.FieldName;
                 JapaneseObjectsLine."Field Caption" := FieldInfo."Field Caption";
-                JapaneseObjectsLine."Field Caption (Japanese)" := TranslationHelper.GetTranslatedFieldCaption('JPN', JapaneseObjectsLine."Object ID", JapaneseObjectsLine."Field ID");
+                if JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"Table" then
+                    JapaneseObjectsLine."Field Caption (Japanese)" := TranslationHelper.GetTranslatedFieldCaption('JPN', JapaneseObjectsLine."Object ID", JapaneseObjectsLine."Field ID");
+                if JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"TableExtension" then
+                    JapaneseObjectsLine."Field Caption (Japanese)" := TranslationHelper.GetTranslatedFieldCaption('JPN', JapaneseObjectsHeader."Extends Object ID", JapaneseObjectsLine."Field ID");
                 JapaneseObjectsLine."Field Data Type" := Format(FieldInfo.Type);
                 JapaneseObjectsLine."Field Length" := Format(FieldInfo.Len);
                 JapaneseObjectsLine."Field Class" := Format(FieldInfo.Class);
@@ -337,6 +350,24 @@ table 99106 "Japanese Objects Header"
             Message(JpnCaptionLbl);
     end;
 
+    procedure UpdateJapaneseObjectName(JapaneseObjectsHeader: Record "Japanese Objects Header")
+    var
+        JapaneseObjectsLine: Record "Japanese Objects Line";
+        FieldInfo: Record Field;
+
+    begin
+        JapaneseObjectsLine.Reset();
+        JapaneseObjectsLine.SetRange("Entry No.", JapaneseObjectsHeader."Entry No.");
+        JapaneseObjectsLine.SetRange("App Name", JapaneseObjectsHeader."App Name");
+        JapaneseObjectsLine.SetRange("Object Type", JapaneseObjectsHeader."Object Type");
+        JapaneseObjectsLine.SetRange("Object ID", JapaneseObjectsHeader."Object ID");
+        if JapaneseObjectsLine.FindSet() then
+            repeat
+                JapaneseObjectsLine."Object Name" := JapaneseObjectsHeader."Object Name";
+                JapaneseObjectsLine.Modify();
+            until JapaneseObjectsLine.Next() = 0;
+    end;
+
     local procedure CheckAndValidateExtendsObjectFields()
     var
         AllObjWithCaption: Record AllObjWithCaption;
@@ -378,31 +409,6 @@ table 99106 "Japanese Objects Header"
         Clear("Extends Object Name");
     end;
 
-    /*
-    procedure InsertObjectChangeLog()
-    var
-        JpnChangelogHeader: Record "Japanese Changelog Header";
-        JpnChangelogLine: Record "Japanese Changelog Line";
-        InsertJpnChangelogLine: Record "Japanese Changelog Line";
-    begin
-        JpnChangelogHeader.Reset();
-        JpnChangelogHeader.SetRange("App Name", Rec."App Name");
-        if JpnChangelogHeader.FindFirst() then begin
-            JpnChangelogLine.Reset();
-            JpnChangelogLine.SetRange("App Name", JpnChangelogHeader."App Name");
-            JpnChangelogLine.SetRange("Document No.", JpnChangelogHeader."No.");
-            if JpnChangelogLine.FindLast() then begin
-                InsertJpnChangelogLine.Init();
-                InsertJpnChangelogLine."App Name" := JpnChangelogHeader."App Name";
-                InsertJpnChangelogLine."Document No." := JpnChangelogHeader."No.";
-                InsertJpnChangelogLine."Line No." := JpnChangelogLine."Line No." + 10000;
-                InsertJpnChangelogLine."Object Type" := Rec."Object Type";
-                //InsertJpnChangelogLine."Object ID" := Rec."Object ID";
-                InsertJpnChangelogLine.Insert();
-            end;
-        end;
-    end;
-    */
     procedure ErrorIfSalesLinesExist(ChangedFieldName: Text[100]; JapaneseObjectsHeader: Record "Japanese Objects Header")
     var
         MessageText: Text;

@@ -31,7 +31,6 @@ table 99105 "Japanese Objects Line"
         field(19; "Object Name"; Text[30])
         {
             Caption = 'Object Name';
-            Editable = false;
         }
         field(10; "Object Element"; Enum "Object Element TJP")
         {
@@ -53,9 +52,9 @@ table 99105 "Japanese Objects Line"
                     UpdateTableFieldInfo();
             end;
         }
-        field(12; "Field Name"; Text[30])
+        field(12; "Field Name"; Text[100])
         {
-            Caption = 'Field Name';
+            Caption = 'Name/Description';
         }
         field(13; "Field Caption"; Text[100])
         {
@@ -72,6 +71,14 @@ table 99105 "Japanese Objects Line"
         field(16; "ToolTip (Japanese)"; Text[500])
         {
             Caption = 'ToolTip (Japanese)';
+        }
+        field(17; "Element ID"; Integer)
+        {
+            Caption = 'Element ID';
+        }
+        field(18; "Element Name"; Text[50])
+        {
+            Caption = 'Element Name';
         }
         field(20; "Field Data Type"; Text[50])
         {
@@ -116,9 +123,13 @@ table 99105 "Japanese Objects Line"
             Caption = 'App Runtime Package ID';
             Editable = false;
         }
-        field(30; "Name"; Text[200])
+        field(29; "Event Object Type"; Text[200])
         {
-            Caption = 'Name';
+            Caption = 'Event Object Type';
+        }
+        field(30; "Event Object Name"; Text[200])
+        {
+            Caption = 'Event Object Name';
         }
         field(31; "Event Name"; Text[100])
         {
@@ -131,6 +142,10 @@ table 99105 "Japanese Objects Line"
         field(33; "Brief"; Text[1024])
         {
             Caption = 'Brief';
+        }
+        field(34; "Procedure Name"; Text[200])
+        {
+            Caption = 'Procedure Name';
         }
         field(60; "Creation By"; Code[50])
         {
@@ -216,6 +231,7 @@ table 99105 "Japanese Objects Line"
         "App Name" := JapaneseObjectsHeader."App Name";
         "Object Type" := JapaneseObjectsHeader."Object Type";
         "Object ID" := JapaneseObjectsHeader."Object ID";
+        "Object Name" := JapaneseObjectsHeader."Object Name";
         if "Object Element" = "Object Element"::"Procedure" then begin
             "Field Caption" := NotApplicableLbl;
             "Field Caption (Japanese)" := NotApplicableLbl;
@@ -223,6 +239,8 @@ table 99105 "Japanese Objects Line"
             "Field Length" := NotApplicableLbl;
             "Field Class" := NotApplicableLbl;
             "Option String" := NotApplicableLbl;
+            ToolTip := NotApplicableLbl;
+            "ToolTip (Japanese)" := NotApplicableLbl;
         end;
     end;
 

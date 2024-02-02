@@ -16,9 +16,11 @@ page 99100 "Japanese Objects Subform CU"
             repeater(General)
             {
                 field("Object Element"; Rec."Object Element") { }
-                field(Name; Rec.Name) { }
+                field("Event Object Type"; Rec."Event Object Type") { }
+                field("Event Object Name"; Rec."Event Object Name") { }
                 field("Event Name"; Rec."Event Name") { }
                 field("Event Element Name"; Rec."Event Element Name") { }
+                field("Procedure Name"; Rec."Procedure Name") { }
                 field(Brief; Rec.Brief) { }
             }
         }

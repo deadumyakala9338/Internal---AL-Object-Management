@@ -16,7 +16,7 @@ page 99112 "Japanese Objects Subform Rep."
             repeater(General)
             {
                 field("Object Element"; Rec."Object Element") { }
-                field(Name; Rec.Name) { }
+                field("Object Name"; Rec."Object Name") { }
                 field(Brief; Rec.Brief) { }
             }
         }

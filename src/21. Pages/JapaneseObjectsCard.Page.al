@@ -29,10 +29,6 @@ page 99109 "Japanese Objects Card"
                 field("Extends Object Name"; Rec."Extends Object Name") { }
                 field("Source Object ID"; Rec."Source Object ID") { }
                 field("Source Object Name"; Rec."Source Object Name") { }
-                field("Creation By"; Rec."Creation By") { }
-                field("Creation Date"; Rec."Creation Date") { }
-                field("Last Modified By"; Rec."Last Modified By") { }
-                field("Last Modified Date"; Rec."Last Modified Date") { }
             }
             part(LinesTable; "Japanese Objects Subform")
             {
@@ -61,6 +57,13 @@ page 99109 "Japanese Objects Card"
                 SubPageLink = "Entry No." = field("Entry No.");
                 UpdatePropagation = Both;
                 Visible = ReportPagedVisible;
+            }
+            part(LinesEnum; "Japanese Objects Subform Enum")
+            {
+                ApplicationArea = Basic, Suite;
+                SubPageLink = "Entry No." = field("Entry No.");
+                UpdatePropagation = Both;
+                Visible = EnumPageVisible;
             }
             part(LinesOther; "Japanese Objects Subform Other")
             {
@@ -94,6 +97,7 @@ page 99109 "Japanese Objects Card"
                 Caption = 'Update Japanese Captions.';
                 ApplicationArea = Basic, Suite;
                 Image = UpdateDescription;
+                Visible = false;
 
                 trigger OnAction()
                 var
@@ -147,43 +151,54 @@ page 99109 "Japanese Objects Card"
     end;
 
     var
-        TablePageVisible, PagePageVisible, CodeunitPageVisible, ReportPagedVisible, OthersPageVisible : Boolean;
+        TablePageVisible, PagePageVisible, CodeunitPageVisible, ReportPagedVisible, EnumPageVisible, OthersPageVisible : Boolean;
         UpdateJpnCaption: Boolean;
 
     local procedure InitializeVisibleVariables()
     begin
         TablePageVisible := false;
+        PagePageVisible := false;
         CodeunitPageVisible := false;
         ReportPagedVisible := false;
+        EnumPageVisible := false;
         OthersPageVisible := false;
 
         case Rec."Object Type" of
             Rec."Object Type"::"Table":
-                SetJpnLineFieldsVisible(true, false, false, false, false);
+                SetJpnLineFieldsVisible(true, false, false, false, false, false);
             Rec."Object Type"::"TableExtension":
-                SetJpnLineFieldsVisible(true, false, false, false, false);
+                SetJpnLineFieldsVisible(true, false, false, false, false, false);
             Rec."Object Type"::"Page":
-                SetJpnLineFieldsVisible(false, true, false, false, false);
+                SetJpnLineFieldsVisible(false, true, false, false, false, false);
             Rec."Object Type"::"PageExtension":
-                SetJpnLineFieldsVisible(false, true, false, false, false);
+                SetJpnLineFieldsVisible(false, true, false, false, false, false);
             Rec."Object Type"::"Codeunit":
-                SetJpnLineFieldsVisible(false, false, true, false, false);
+                SetJpnLineFieldsVisible(false, false, true, false, false, false);
             Rec."Object Type"::"Report":
-                SetJpnLineFieldsVisible(false, false, false, true, false);
+                SetJpnLineFieldsVisible(false, false, false, true, false, false);
+            Rec."Object Type"::"ReportExtension":
+                SetJpnLineFieldsVisible(false, false, false, true, false, false);
+            Rec."Object Type"::"Enum":
+                SetJpnLineFieldsVisible(false, false, false, false, true, false);
+            Rec."Object Type"::"EnumExtension":
+                SetJpnLineFieldsVisible(false, false, false, false, true, false);
             Rec."Object Type"::"PermissionSet":
-                SetJpnLineFieldsVisible(false, false, false, false, true);
+                SetJpnLineFieldsVisible(false, false, false, false, false, true);
             Rec."Object Type"::"PermissionSetExtension":
-                SetJpnLineFieldsVisible(false, false, false, false, true);
+                SetJpnLineFieldsVisible(false, false, false, false, false, true);
+            Rec."Object Type"::"Profile":
+                SetJpnLineFieldsVisible(false, false, false, false, false, true);
         end;
     end;
 
     local procedure SetJpnLineFieldsVisible(NewTablePageVisible: Boolean; NewPagePageVisible: Boolean; NewCodeunitPageVisible: Boolean;
-                                            NewReportPagedVisible: Boolean; NewOthersPageVisible: Boolean)
+                                            NewReportPagedVisible: Boolean; NewEnumPageVisible: Boolean; NewOthersPageVisible: Boolean)
     begin
         TablePageVisible := NewTablePageVisible;
         PagePageVisible := NewPagePageVisible;
         CodeunitPageVisible := NewCodeunitPageVisible;
         ReportPagedVisible := NewReportPagedVisible;
+        EnumPageVisible := NewEnumPageVisible;
         OthersPageVisible := NewOthersPageVisible;
     end;
 }

@@ -1,4 +1,4 @@
-page 99101 "Japanese Objects Subform Other"
+page 99103 "Japanese Objects Subform Enum"
 {
     AutoSplitKey = true;
     ApplicationArea = All;
@@ -16,8 +16,10 @@ page 99101 "Japanese Objects Subform Other"
             repeater(General)
             {
                 field("Object Element"; Rec."Object Element") { }
-                field("Object Name"; Rec."Object Name") { }
-                field(Brief; Rec.Brief) { }
+                field("Element ID"; Rec."Element ID") { }
+                field("Element Name"; Rec."Element Name") { }
+                field("Field Caption"; Rec."Field Caption") { }
+                field("Field Caption (Japanese)"; Rec."Field Caption (Japanese)") { }
             }
         }
     }
