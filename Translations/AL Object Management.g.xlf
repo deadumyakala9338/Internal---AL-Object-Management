@@ -433,6 +433,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Object Changelogs - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 482363849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese Object Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Object Lines - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3331148031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese Objects</source>
           <note from="Developer" annotates="general" priority="2"></note>
