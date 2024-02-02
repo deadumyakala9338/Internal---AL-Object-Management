@@ -408,6 +408,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field ToolTip (Japanese) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 24686978 - Method 1665861916 - NamedType 4104898276" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AllObjects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - Method OnRun - NamedType SheetName</note>
+        </trans-unit>
         <trans-unit id="Page 1122011550 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese App Information</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -437,6 +442,11 @@
           <source>Japanese Object Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Object Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 482363849 - Action 720336278 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export All Object Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Object Lines - Action ExportPageObjectData - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3331148031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese Objects</source>
@@ -527,6 +537,11 @@
           <source>Define Change Log Reason</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Japanese Object Change Log - Control SetChangeLogReason - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1285547218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Japanese Object Data Export</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Japanese Object Data Export - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2281215205 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

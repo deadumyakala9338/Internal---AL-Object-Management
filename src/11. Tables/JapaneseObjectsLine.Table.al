@@ -177,9 +177,8 @@ table 99105 "Japanese Objects Line"
         {
             Clustered = true;
         }
-        key(Key2; "App Name", "Object Type", "Object ID")
-        {
-        }
+        key(Key2; "App Name", "Object Type", "Object ID") { }
+        key(Key3; "Object Type") { }
     }
     trigger OnInsert()
     begin

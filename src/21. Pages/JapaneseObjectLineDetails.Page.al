@@ -39,4 +39,23 @@ page 99105 "Japanese Object Lines"
             }
         }
     }
+    actions
+    {
+        area(Processing)
+        {
+            action(ExportPageObjectData)
+            {
+                Caption = 'Export All Object Data';
+                ApplicationArea = Basic, Suite;
+                Image = Export;
+
+                trigger OnAction()
+                var
+                    ExportJapaneseObjectData: Codeunit "Export Japanese Object Data";
+                begin
+                    ExportJapaneseObjectData.Run()
+                end;
+            }
+        }
+    }
 }
