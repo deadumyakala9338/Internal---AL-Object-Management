@@ -409,7 +409,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field ToolTip (Japanese) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 24686978 - Method 1665861916 - NamedType 4104898276" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AllObjects</source>
+          <source>Localization Objects Information</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - Method OnRun - NamedType SheetName</note>
         </trans-unit>

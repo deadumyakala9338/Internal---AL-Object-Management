@@ -6,23 +6,12 @@ codeunit 99100 "Export Japanese Object Data"
         FileName: Text;
         OutStream: OutStream;
         InStream: Instream;
-        SheetName: Label 'AllObjects';
+        SheetName: Label 'Localization Objects Information';
     begin
-        TempExcelBuffer.DeleteAll();
-        TempExcelBuffer.ClearNewRow();
+        ExportTableData();
+        ExportPageData();
+        CreateExcelBook();
 
-        ExportTableObjectData();
-        TempExcelBuffer.CreateNewBook('Tables');
-        TempExcelBuffer.WriteSheet('Tables', '', '');
-        //CreateExcelSheet('TJP-Table', true);
-        ExportPageObjectData();
-        TempExcelBuffer.CreateNewBook('Pages');
-        TempExcelBuffer.WriteSheet('Pages', '', '');
-        //CreateExcelSheet('TJP-Page', false);
-        //CreateExcelBook();
-        TempExcelBuffer.CloseBook();
-
-        // Download Excel
         TempBlob.CreateOutStream(OutStream);
         TempExcelBuffer.SaveToStream(OutStream, true);
         TempBlob.CreateInStream(InStream);
@@ -31,88 +20,89 @@ codeunit 99100 "Export Japanese Object Data"
         DownloadFromStream(InStream, '', '', '', FileName);
     end;
 
-    local procedure ExportTableObjectData()
+    local procedure ExportTableData()
     var
         JapaneseObjectsLine: Record "Japanese Objects Line";
     begin
-        JapaneseObjectsLine.Reset();
-        JapaneseObjectsLine.SetCurrentKey("Object Type");
-        JapaneseObjectsLine.SetRange("Object Type", JapaneseObjectsLine."Object Type"::"Table", JapaneseObjectsLine."Object Type"::"TableExtension");
-        if JapaneseObjectsLine.FindSet() then begin
-            CreateExcelHeader(JapaneseObjectsLine);
-            repeat
-                CreateExcelBody(JapaneseObjectsLine);
-            until JapaneseObjectsLine.Next() = 0;
-        end;
-
-    end;
-
-    local procedure ExportPageObjectData()
-    var
-        JapaneseObjectsLine: Record "Japanese Objects Line";
-    begin
-        JapaneseObjectsLine.Reset();
-        JapaneseObjectsLine.SetCurrentKey("Object Type");
-        JapaneseObjectsLine.SetRange("Object Type", JapaneseObjectsLine."Object Type"::"Page", JapaneseObjectsLine."Object Type"::"PageExtension");
-        if JapaneseObjectsLine.FindSet() then begin
-            CreateExcelHeader(JapaneseObjectsLine);
-            repeat
-                CreateExcelBody(JapaneseObjectsLine);
-            until JapaneseObjectsLine.Next() = 0;
-        end;
-    end;
-
-    local procedure CreateExcelHeader(JapaneseObjectsLine: Record "Japanese Objects Line")
-    begin
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine.FieldCaption("App Name"), false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine.FieldCaption("Object Type"), false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine.FieldCaption("Object ID"), false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine.FieldCaption("Object Name"), false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine.FieldCaption("Object Element"), false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        if (JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"Table") or
-           (JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"TableExtension") then begin
-            TempExcelBuffer.AddColumn(JapaneseObjectsLine.FieldCaption("Field ID"), false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
-            TempExcelBuffer.AddColumn(JapaneseObjectsLine.FieldCaption("Field Name"), false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        end;
-        if (JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"Page") or
-           (JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"PageExtension") then
-            TempExcelBuffer.AddColumn(JapaneseObjectsLine.FieldCaption("Field Name"), false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
-    end;
-
-    local procedure CreateExcelBody(JapaneseObjectsLine: Record "Japanese Objects Line")
-    begin
-        TempExcelBuffer.NewRow();
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine."App Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Type", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object ID", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Element", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        if (JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"Table") or
-           (JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"TableExtension") then begin
-            TempExcelBuffer.AddColumn(JapaneseObjectsLine."Field ID", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-            TempExcelBuffer.AddColumn(JapaneseObjectsLine."Field Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        end;
-        if (JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"Page") or
-           (JapaneseObjectsLine."Object Type" = JapaneseObjectsLine."Object Type"::"PageExtension") then
-            TempExcelBuffer.AddColumn(JapaneseObjectsLine."Field Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-    end;
-
-    local procedure CreateExcelSheet(SheetName: Text[250]; NewBook: Boolean)
-    begin
-        if NewBook then
-            TempExcelBuffer.CreateNewBook(SheetName)
-        else
-            TempExcelBuffer.SelectOrAddSheet(SheetName);
-        TempExcelBuffer.WriteSheet(SheetName, CompanyName, UserId);
+        TempExcelBuffer.Reset();
         TempExcelBuffer.DeleteAll();
-        TempExcelBuffer.ClearNewRow();
+        TempExcelBuffer.NewRow();
+        TempExcelBuffer.AddColumn('App Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Object Type', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Object ID', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Object Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Object Element', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Field ID', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Field Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+
+        JapaneseObjectsLine.Reset();
+        JapaneseObjectsLine.SetCurrentKey("Object Type");
+        JapaneseObjectsLine.SetFilter("Object Type", '%1|%2', JapaneseObjectsLine."Object Type"::"Table", JapaneseObjectsLine."Object Type"::"TableExtension");
+        if JapaneseObjectsLine.FindSet() then
+            repeat
+                TempExcelBuffer.NewRow();
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."App Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Type", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object ID", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Element", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Field ID", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Field Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            until JapaneseObjectsLine.Next() = 0;
+        TempExcelBuffer.CreateNewBook('Table Data');
+        TempExcelBuffer.WriteSheet('Localization Object Data', CompanyName, UserId);
+
+        TempExcelBuffer.SetColumnWidth('A', 27);
+        TempExcelBuffer.SetColumnWidth('B', 15);
+        TempExcelBuffer.SetColumnWidth('C', 09);
+        TempExcelBuffer.SetColumnWidth('D', 30);
+        TempExcelBuffer.SetColumnWidth('E', 15);
+        TempExcelBuffer.SetColumnWidth('F', 09);
+        TempExcelBuffer.SetColumnWidth('G', 30);
+    end;
+
+    local procedure ExportPageData()
+    var
+        JapaneseObjectsLine: Record "Japanese Objects Line";
+    begin
+        TempExcelBuffer.DeleteAll();
+        TempExcelBuffer.SetCurrent(0, 0);
+        TempExcelBuffer.SelectOrAddSheet('Page Data');
+        TempExcelBuffer.NewRow();
+        TempExcelBuffer.AddColumn('App Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Object Type', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Object ID', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Object Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Object Element', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Field Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+
+        JapaneseObjectsLine.Reset();
+        JapaneseObjectsLine.SetCurrentKey("Object Type");
+        JapaneseObjectsLine.SetFilter("Object Type", '%1|%2', JapaneseObjectsLine."Object Type"::"Page", JapaneseObjectsLine."Object Type"::"PageExtension");
+        if JapaneseObjectsLine.FindSet() then
+            repeat
+                TempExcelBuffer.NewRow();
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."App Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Type", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object ID", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Object Element", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(JapaneseObjectsLine."Field Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            until JapaneseObjectsLine.Next() = 0;
+        TempExcelBuffer.WriteSheet('Localization Object Data', CompanyName, UserId);
+
+        TempExcelBuffer.SetColumnWidth('A', 27);
+        TempExcelBuffer.SetColumnWidth('B', 15);
+        TempExcelBuffer.SetColumnWidth('C', 09);
+        TempExcelBuffer.SetColumnWidth('D', 30);
+        TempExcelBuffer.SetColumnWidth('E', 15);
+        TempExcelBuffer.SetColumnWidth('F', 30);
     end;
 
     local procedure CreateExcelBook()
     begin
         TempExcelBuffer.CloseBook();
-        TempExcelBuffer.SetFriendlyFilename('All Japanese Objects Information');
-        TempExcelBuffer.OpenExcel();
+        TempExcelBuffer.SetFriendlyFilename('Localization Object Data');
     end;
 
     var
