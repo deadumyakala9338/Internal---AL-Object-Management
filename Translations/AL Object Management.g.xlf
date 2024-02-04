@@ -408,10 +408,50 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field ToolTip (Japanese) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Codeunit 24686978 - Method 1665861916 - NamedType 4104898276" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Localization Objects Information</source>
+        <trans-unit id="Codeunit 24686978 - NamedType 94382347" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunits</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - Method OnRun - NamedType SheetName</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - NamedType CodeunitDataLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 24686978 - NamedType 4173314091" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enums</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - NamedType EnumDataLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 24686978 - NamedType 2662964296" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Localization Object Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - NamedType FriendlyFilenameLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 24686978 - NamedType 4196489075" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - NamedType PageDataLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 24686978 - NamedType 1905650987" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Permission Sets</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - NamedType PermSetsDataLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 24686978 - NamedType 3137455515" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profiles</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - NamedType ProfileDataLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 24686978 - NamedType 4092249872" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reports</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - NamedType ReportDataLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 24686978 - NamedType 1139401744" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tables</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - NamedType TableDataLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 24686978 - Method 1665861916 - NamedType 336808233" size-unit="char" translate="yes" xml:space="preserve">
+          <source>.xlsx</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Data - Method OnRun - NamedType FileExt</note>
         </trans-unit>
         <trans-unit id="Page 1122011550 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese App Information</source>
@@ -537,11 +577,6 @@
           <source>Define Change Log Reason</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Japanese Object Change Log - Control SetChangeLogReason - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Report 1285547218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Japanese Object Data Export</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report Japanese Object Data Export - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2281215205 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

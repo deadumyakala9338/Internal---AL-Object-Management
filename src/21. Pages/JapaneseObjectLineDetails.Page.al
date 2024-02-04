@@ -47,7 +47,7 @@ page 99105 "Japanese Object Lines"
             {
                 Caption = 'Export All Object Data';
                 ApplicationArea = Basic, Suite;
-                Image = Export;
+                Image = ExportAttachment;
 
                 trigger OnAction()
                 var
