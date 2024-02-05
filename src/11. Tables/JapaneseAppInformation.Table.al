@@ -35,7 +35,7 @@ table 99100 "Japanese App Information"
         field(6; "App Runtime Package ID"; Text[250])
         {
             Caption = 'App Runtime Package ID';
-            Editable = false;
+            //Editable = false;
         }
         field(7; "App Publisher"; Text[250])
         {
