@@ -123,16 +123,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field App Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1147336538 - Field 1367742458 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>App Package ID</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field App Package ID - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1147336538 - Field 4267837798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>App Runtime Package ID</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field App Runtime Package ID - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 1147336538 - Field 1313112702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Creation By</source>
           <note from="Developer" annotates="general" priority="2"></note>
