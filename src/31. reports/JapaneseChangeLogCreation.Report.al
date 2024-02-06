@@ -43,6 +43,7 @@ report 99100 "Japanese Object Change Log"
             JapaneseChangelogLine."App Name" := JapaneseObjectsHeader."App Name";
             JapaneseChangelogLine."Object Type" := JapaneseObjectsHeader."Object Type";
             JapaneseChangelogLine."Object ID" := JapaneseObjectsHeader."Object ID";
+            JapaneseChangelogLine."Object Name" := JapaneseObjectsHeader."Object Name";
             JapaneseChangelogLine."Change Log Reason" := ChangeLogReason;
             JapaneseChangelogLine.Insert(true);
         end;

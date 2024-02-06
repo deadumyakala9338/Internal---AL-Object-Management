@@ -26,4 +26,6 @@ page 99102 "Japanese Obj. Changelog Entry"
             }
         }
     }
+
 }
+

@@ -67,7 +67,7 @@ table 99104 "Japanese Changelog Line"
         {
             Clustered = true;
         }
-        key(Key2; "App Name", "Object Type", "Object ID")
+        key(Key2; "App Name", "Object Type", "Object ID", "Log Creation Date")
         {
         }
     }

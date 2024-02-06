@@ -398,6 +398,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Line - Field ToolTip (Japanese) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2171686333 - NamedType 2742773281" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Change Log.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Changes - NamedType ChangeObjectInfoLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2171686333 - NamedType 336808233" size-unit="char" translate="yes" xml:space="preserve">
+          <source>.xlsx</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Changes - NamedType FileExt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2171686333 - NamedType 2662964296" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Localization Object Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Japanese Object Changes - NamedType FriendlyFilenameLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 24686978 - NamedType 94382347" size-unit="char" translate="yes" xml:space="preserve">
           <source>Codeunits</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -467,6 +482,11 @@
           <source>Japanese Object Changelogs</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Object Changelogs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1468850045 - Action 910196301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Object Change Log.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Object Changelogs - Action CreateObjectChangeLog - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 482363849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Japanese Object Lines</source>
@@ -552,6 +572,21 @@
           <source>Object Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Subform Rep. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2067109747 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Log Creation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export Japanese Change Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2067109747 - Control 2799736008 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export Japanese Change Log - Control RepEndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2067109747 - Control 3408215501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export Japanese Change Log - Control RepStartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1833355716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Change Log Creation</source>
