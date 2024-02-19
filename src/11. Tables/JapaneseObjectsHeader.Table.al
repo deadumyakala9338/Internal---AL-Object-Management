@@ -142,6 +142,13 @@ table 99106 "Japanese Objects Header"
             Caption = 'Source Object Name';
             Editable = false;
         }
+        field(59; Status; Option)
+        {
+            Caption = 'Status';
+            OptionMembers = "Open","Released";
+            OptionCaption = 'Open ,Released';
+            Editable = false;
+        }
         field(60; "Creation By"; Code[50])
         {
             Caption = 'Creation By';
@@ -190,6 +197,8 @@ table 99106 "Japanese Objects Header"
     begin
         "Last Modified By" := UserId;
         "Last Modified Date" := WorkDate();
+        if Rec.Status <> Rec.Status::Open then
+            Error('Status should be Open');
     end;
 
     local procedure InsertEntryNo()

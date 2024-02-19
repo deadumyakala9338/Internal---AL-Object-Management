@@ -218,6 +218,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Source Object Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1147336538 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1147336538 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open ,Released</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Japanese Objects Header - Field Status - Property OptionCaption</note>
+        </trans-unit>
         <trans-unit id="Table 2871221953 - Method 826519159 - NamedType 985601854" size-unit="char" translate="yes" xml:space="preserve">
           <source>n/a</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -507,6 +517,21 @@
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3331148031 - Action 3560983695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Release</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action Action21 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3331148031 - Action 4032263875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Re&amp;lease</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action Release - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3331148031 - Action 2071937805 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Re&amp;open</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Japanese Objects Card - Action Reopen - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3331148031 - Action 910196301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Create Object Change Log.</source>

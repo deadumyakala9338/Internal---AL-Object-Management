@@ -29,6 +29,7 @@ page 99109 "Japanese Objects Card"
                 field("Extends Object Name"; Rec."Extends Object Name") { }
                 field("Source Object ID"; Rec."Source Object ID") { }
                 field("Source Object Name"; Rec."Source Object Name") { }
+                field(Status; Rec.Status) { }
             }
             part(LinesTable; "Japanese Objects Subform")
             {
@@ -89,6 +90,9 @@ page 99109 "Japanese Objects Card"
                 var
                     JapaneseObjectsHeader: Record "Japanese Objects Header";
                 begin
+                    if Rec.Status <> Rec.Status::Open then
+                        Error('Status should be Open');
+
                     JapaneseObjectsHeader.UpdateJapaneseObjectLineDetails(Rec);
                 end;
             }
@@ -103,6 +107,9 @@ page 99109 "Japanese Objects Card"
                 var
                     JapaneseObjectsHeader: Record "Japanese Objects Header";
                 begin
+                    if Rec.Status <> Rec.Status::Released then
+                        Error('Status should be Released');
+
                     System.GlobalLanguage(1041);
                     JapaneseObjectsHeader.UpdateJapaneseCaptionHeader(Rec);
                     JapaneseObjectsHeader.UpdateJapaneseCaptionLines(Rec);
@@ -118,6 +125,9 @@ page 99109 "Japanese Objects Card"
                 var
                     JapaneseObjectChangeLog: Report "Japanese Object Change Log";
                 begin
+                    if Rec.Status <> Rec.Status::Released then
+                        Error('Status should be Released');
+
                     JapaneseObjectChangeLog.SetObjectInfo(Rec."Entry No.");
                     JapaneseObjectChangeLog.RunModal();
                 end;
@@ -129,6 +139,48 @@ page 99109 "Japanese Objects Card"
                 Image = LedgerEntries;
                 RunObject = page "Japanese Obj. Changelog Entry";
                 RunPageLink = "Entry No." = field("Entry No.");
+            }
+            group(Action21)
+            {
+                Caption = 'Release';
+                Image = ReleaseDoc;
+                action(Release)
+                {
+                    ApplicationArea = Suite;
+                    Caption = 'Re&lease';
+                    Image = ReleaseDoc;
+
+                    trigger OnAction()
+                    var
+                        JapaneseObjectsHeader: Record "Japanese Objects Header";
+                    begin
+                        JapaneseObjectsHeader.Reset();
+                        JapaneseObjectsHeader.SetRange("Entry No.", Rec."Entry No.");
+                        if JapaneseObjectsHeader.FindFirst() then begin
+                            JapaneseObjectsHeader.Status := JapaneseObjectsHeader.Status::Released;
+                            JapaneseObjectsHeader.Modify();
+                        end;
+                    end;
+                }
+                action(Reopen)
+                {
+                    ApplicationArea = Basic, Suite;
+                    Caption = 'Re&open';
+                    Enabled = Rec.Status <> Rec.Status::Open;
+                    Image = ReOpen;
+
+                    trigger OnAction()
+                    var
+                        JapaneseObjectsHeader: Record "Japanese Objects Header";
+                    begin
+                        JapaneseObjectsHeader.Reset();
+                        JapaneseObjectsHeader.SetRange("Entry No.", Rec."Entry No.");
+                        if JapaneseObjectsHeader.FindFirst() then begin
+                            JapaneseObjectsHeader.Status := JapaneseObjectsHeader.Status::Open;
+                            JapaneseObjectsHeader.Modify();
+                        end;
+                    end;
+                }
             }
         }
     }
