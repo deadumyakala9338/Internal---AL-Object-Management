@@ -201,6 +201,12 @@ table 99106 "Japanese Objects Header"
             Error('Status should be Open');
     end;
 
+    trigger OnDelete()
+    begin
+        if Rec.Status <> Rec.Status::Open then
+            Error('Status should be Open');
+    end;
+
     local procedure InsertEntryNo()
     var
         JapaneseObjectsHeader: Record "Japanese Objects Header";
