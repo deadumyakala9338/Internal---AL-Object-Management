@@ -1,6 +1,9 @@
 table 99104 "Japanese Changelog Line"
 {
     Caption = 'Japanese Changelog Line';
+    DataPerCompany = false;
+    ReplicateData = false;
+
     fields
     {
         field(1; "Entry No."; Integer)

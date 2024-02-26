@@ -1,5 +1,9 @@
 table 99105 "Japanese Objects Line"
 {
+    Caption = 'Japanese Objects Line';
+    DataPerCompany = false;
+    ReplicateData = false;
+
     fields
     {
         field(1; "Entry No."; Integer)
