@@ -27,7 +27,10 @@ page 99109 "Japanese Objects Card"
                 field("Extends Object Type"; Rec."Extends Object Type") { }
                 field("Extends Object ID"; Rec."Extends Object ID") { }
                 field("Extends Object Name"; Rec."Extends Object Name") { }
-                field("Source Object ID"; Rec."Source Object ID") { }
+                field("Source Object ID"; Rec."Source Object ID")
+                {
+                    Editable = Rec."Object Type" = Rec."Object Type"::Page;
+                }
                 field("Source Object Name"; Rec."Source Object Name") { }
                 field(Status; Rec.Status) { }
             }

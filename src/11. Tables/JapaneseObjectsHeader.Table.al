@@ -287,6 +287,7 @@ table 99106 "Japanese Objects Header"
                 JapaneseObjectsLine."App Name" := JapaneseObjectsHeader."App Name";
                 JapaneseObjectsLine."Object Type" := JapaneseObjectsHeader."Object Type";
                 JapaneseObjectsLine."Object ID" := JapaneseObjectsHeader."Object ID";
+                JapaneseObjectsLine."Object Name" := JapaneseObjectsHeader."Object Name";
                 JapaneseObjectsLine."Object Element" := JapaneseObjectsLine."Object Element"::Field;
                 JapaneseObjectsLine."Field ID" := FieldInfo."No.";
                 JapaneseObjectsLine."Field Name" := FieldInfo.FieldName;
