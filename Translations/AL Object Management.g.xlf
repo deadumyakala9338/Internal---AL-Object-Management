@@ -733,6 +733,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Page Type TJP - EnumValue Total - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PermissionSet 4014718295 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Barcode Management.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet AL OBJECTS TJP - Property Caption</note>
+        </trans-unit>
       </group>
     </body>
   </file>
