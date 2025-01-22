@@ -4,7 +4,7 @@ page 99105 "Japanese Object Lines"
     Caption = 'Japanese Object Lines';
     PageType = List;
     SourceTable = "Japanese Objects Line";
-    DeleteAllowed = false;
+    //DeleteAllowed = false;
     ModifyAllowed = false;
     InsertAllowed = false;
     UsageCategory = Lists;

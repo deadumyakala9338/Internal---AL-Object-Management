@@ -16,7 +16,7 @@ table 99100 "Japanese App Information"
         field(3; "App ID"; Text[250])
         {
             Caption = 'App ID';
-            TableRelation = "NAV App Installed App" where(Publisher = filter('Tectura Japan K.K.'));
+            TableRelation = "NAV App Installed App";// where(Publisher = filter('Tectura Japan K.K.'));
             trigger OnValidate()
             var
                 NAVAppInstalledApp: Record "NAV App Installed App";

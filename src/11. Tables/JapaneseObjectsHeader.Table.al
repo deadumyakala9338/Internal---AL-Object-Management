@@ -228,7 +228,7 @@ table 99106 "Japanese Objects Header"
         AllObjWithCaption.Reset();
         AllObjWithCaption.SetCurrentKey("Object Type", "Object ID");
         AllObjWithCaption.SetRange("Object Type", Rec."Object Type");
-        AllObjWithCaption.SetRange("Object ID", 70658575, 70659574);
+        //AllObjWithCaption.SetRange("Object ID", 70658575, 70659574);
         if AllObjWithCaption.FindFirst() then;
         if Page.RunModal(Page::"All Objects with Caption", AllObjWithCaption) = Action::LookupOK then begin
             Rec."Object ID" := AllObjWithCaption."Object ID";
